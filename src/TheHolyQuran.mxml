@@ -1,0 +1,980 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   width="807" height="730" minWidth="807" minHeight="730" creationComplete="initApp()"
+			   viewSourceURL="http://leandr.su/">
+
+	<fx:Script>
+		<![CDATA[
+			import flash.events.Event;
+			import flash.events.ProgressEvent;
+			import flash.media.Sound;
+			import flash.net.URLLoader;
+			import flash.net.URLRequest;
+			
+			import mx.collections.ArrayCollection;
+			import mx.collections.IViewCursor;
+			import mx.controls.dataGridClasses.DataGridColumn;
+			import mx.events.DataGridEvent;
+			import mx.events.FlexEvent;
+			import mx.managers.ToolTipManager;
+			
+			import spark.components.TextArea;
+			import spark.core.IViewport;
+			import spark.components.gridClasses.IGridItemRenderer;
+			import spark.events.GridEvent;
+			import spark.events.GridSortEvent;
+			
+			import vk.gui.Box;
+			import vk.gui.RoundButton;
+			import vk.gui.Utils;
+
+			[Bindable] private var theHolyQuranSuras: ArrayCollection = new ArrayCollection();
+			private var aboutDialog: Box;
+			var playButton: RoundButton;
+			private var currentSura: Object;
+			private var _currentState: int;
+			private var currentChannel: SoundChannel;
+			private var s: Sound;
+			private var currentPosition: Number;
+			private var dialogSura: Box;
+			private var spriteSura:Sprite = new Sprite();
+			private var myCSS = new StyleSheet();
+			private var positionTimer: Timer;
+			private var trans: SoundTransform = new SoundTransform( 0.5, 0 );
+			[Bindable] private var timeProgressed: String;
+			[Bindable] private var timeTotal: String;
+			[Bindable] private var loadProgress: String;
+
+			private function initApp(): void {
+				fillArray();
+				var aboutButton: RoundButton = new RoundButton( "О переводе", 713, 9 );
+				playButton = new RoundButton( "", 665, 9 );
+				aboutButton.addEventListener( MouseEvent.CLICK, about_clickHandler );
+				playButton.addEventListener( MouseEvent.CLICK, play_clickHandler );
+
+				var sprite:Sprite = new Sprite();
+				var tf:TextField = vk.gui.Utils.addText( 0, 0, 500, 14, aboutText, 0,
+					vk.gui.Utils.TXT_HTML | vk.gui.Utils.TXT_AUTOSIZE | vk.gui.Utils.TXT_MULTILINE, 0 );
+				myCSS.setStyle( "a:link", {color:"#0000ff", fontFamily:"Tahoma", textDecoration:"underline"} );
+				myCSS.setStyle( "a:hover", {color:"#0000ff", fontFamily:"Tahoma", textDecoration:"none"} );
+				tf.styleSheet = myCSS;
+				sprite.addChild( tf );
+				aboutDialog = new Box( "О переводе", sprite, 90, 500, [ "OK" ] );
+				aboutDialog.addEventListener( Event.SELECT, aboutDialogClick );
+				dialogSura = new Box( "Священный Коран", spriteSura, 90, 500, [ "OK" ] );
+				dialogSura.addEventListener( Event.SELECT, dialogSuraClick );
+				parent.addChild( aboutDialog );
+				parent.addChild( playButton );
+				parent.addChild( aboutButton );
+				parent.addChild( dialogSura );
+				_setCurrentState( 0 );
+				ToolTipManager.enabled = true;
+			}
+
+			private function fillArray(): void {
+				theHolyQuranSuras = theHolyQuranSurasInReleaseOrder;
+			}
+
+			private var theHolyQuranSurasInReleaseOrder: ArrayCollection = new ArrayCollection( [
+				{
+					id: 96,
+					name: "Сгусток",
+					note: null,
+					document: 48788626
+				}, {
+					id: 74,
+					name: "Закутавшийся",
+					note: null,
+					document: 48788566
+				}, {
+					id: 111,
+					name: "Пальмовые волокна",
+					note: null,
+					document: 48788476
+				}, {
+					id: 106,
+					name: "Курайш",
+					note: null,
+					document: 48788431
+				}, {
+					id: 108,
+					name: "Обильный",
+					note: null,
+					document: 48788384
+				}, {
+					id: 104,
+					name: "Хулитель",
+					note: null,
+					document: 48788332
+				}, {
+					id: 107,
+					name: "Подаяние",
+					note: null,
+					document: 48788272
+				}, {
+					id: 102,
+					name: "Охота к умножению",
+					note: null,
+					document: 48788241
+				}, {
+					id: 105,
+					name: "Слон",
+					note: null,
+					document: 48788188
+				}, {
+					id: 92,
+					name: "Ночь",
+					note: null,
+					document: 48788130
+				}, {
+					id: 90,
+					name: "Город",
+					note: null,
+					document: 48788079
+				}, {
+					id: 94,
+					name: "Разве мы не раскрыли",
+					note: null,
+					document: 48788025
+				}, {
+					id: 93,
+					name: "Утро",
+					note: 11529032,
+					document: 48787962
+				}, {
+					id: 97,
+					name: "Могущество",
+					note: null,
+					document: 48787900
+				}, {
+					id: 86,
+					name: "Идущий ночью",
+					note: null,
+					document: 48787833
+				}, {
+					id: 91,
+					name: "Солнце",
+					note: null,
+					document: 48787746
+				}, {
+					id: 80,
+					name: "Нахмурился",
+					note: null,
+					document: 48787527
+				}, {
+					id: 68,
+					name: "Письменная трость",
+					note: null,
+					document: 48787392
+				}, {
+					id: 87,
+					name: "Высочайший",
+					note: null,
+					document: 48787241
+				}, {
+					id: 95,
+					name: "Смаковница",
+					note: null,
+					document: 48787177
+				}, {
+					id: 103,
+					name: "Предвечернее время",
+					note: null,
+					document: 48787130
+				}, {
+					id: 85,
+					name: "Башни",
+					note: null,
+					document: 48787045
+				}, {
+					id: 73,
+					name: "Завернувшийся",
+					note: null,
+					document: 48786974
+				}, {
+					id: 101,
+					name: "Поражающее",
+					note: null,
+					document: 48786868
+				}, {
+					id: 99,
+					name: "Землетрясение",
+					note: null,
+					document: 48786799
+				}, {
+					id: 82,
+					name: "Раскалывание",
+					note: null,
+					document: 48786726
+				}, {
+					id: 81,
+					name: "Скручивание",
+					note: null,
+					document: 48786634
+				}, {
+					id: 53,
+					name: "Звезда",
+					note: null,
+					document: 48786559
+				}, {
+					id: 84,
+					name: "Разрушение",
+					note: null,
+					document: 48786440
+				}, {
+					id: 100,
+					name: "Мчащиеся",
+					note: null,
+					document: 48786366
+				}, {
+					id: 79,
+					name: "Вырывающие",
+					note: null,
+					document: 48786312
+				}, {
+					id: 77,
+					name: "Посылаемые",
+					note: null,
+					document: 48786203
+				}, {
+					id: 78,
+					name: "Весть",
+					note: null,
+					document: 48786097
+				}, {
+					id: 88,
+					name: "Покрывающие",
+					note: null,
+					document: 48785962
+				}, {
+					id: 89,
+					name: "Заря",
+					note: null,
+					document: 48785870
+				}, {
+					id: 75,
+					name: "Воскресение",
+					note: null,
+					document: 48785778
+				}, {
+					id: 83,
+					name: "Обвешивающие",
+					note: null,
+					document: 48785672
+				}, {
+					id: 69,
+					name: "Неизбежное",
+					note: null,
+					document: 48785485
+				}, {
+					id: 51,
+					name: "Рассеивающие",
+					note: null,
+					document: 48784673
+				}, {
+					id: 52,
+					name: "Гора",
+					note: null,
+					document: 48784525
+				}, {
+					id: 56,
+					name: "Падающие",
+					note: null,
+					document: 48784384
+				}, {
+					id: 70,
+					name: "Ступени",
+					note: null,
+					document: 48784192
+				}, {
+					id: 55,
+					name: "Милосердный",
+					note: null,
+					document: 48784038
+				}, {
+					id: 112,
+					name: "Очищение",
+					note: null,
+					document: 48783900
+				}, {
+					id: 109,
+					name: "Неверные",
+					note: null,
+					document: 48783753
+				}, {
+					id: 113,
+					name: "Рассвет",
+					note: null,
+					document: 48783542
+				}, {
+					id: 114,
+					name: "Люди",
+					note: null,
+					document: 48783476
+				}, {
+					id: 1,
+					name: "Открывающий книгу",
+					note: null,
+					document: 48783377
+				}, {
+					id: 54,
+					name: "Луна",
+					note: null,
+					document: 48783250
+				}, {
+					id: 37,
+					name: "Стоящие рядом",
+					note: null,
+					document: 48783024
+				}, {
+					id: 71,
+					name: "Ной",
+					note: null,
+					document: 48782504
+				}, {
+					id: 76,
+					name: "Человек",
+					note: null,
+					document: 48782396
+				}, {
+					id: 44,
+					name: "Дым",
+					note: null,
+					document: 48782264
+				}, {
+					id: 50,
+					name: "Кав Буква",
+					note: null,
+					document: 48782079
+				}, {
+					id: 20,
+					name: "Та Ха",
+					note: null,
+					document: 48781934
+				}, {
+					id: 26,
+					name: "Поэты",
+					note: null,
+					document: 48781414
+				}, {
+					id: 15,
+					name: "Аль-Хиджр",
+					note: null,
+					document: 48780980
+				}, {
+					id: 19,
+					name: "Мария",
+					note: null,
+					document: 48780674
+				}, {
+					id: 38,
+					name: "Сад Буква",
+					note: null,
+					document: 48779688
+				}, {
+					id: 36,
+					name: "Йа Син",
+					note: null,
+					document: 48779436
+				}, {
+					id: 43,
+					name: "Украшение",
+					note: null,
+					document: 48778893
+				}, {
+					id: 72,
+					name: "Гении",
+					note: null,
+					document: 48778574
+				}, {
+					id: 67,
+					name: "Власть",
+					note: null,
+					document: 48778417
+				}, {
+					id: 23,
+					name: "Верующие",
+					note: null,
+					document: 48777824
+				}, {
+					id: 21,
+					name: "Пророки",
+					note: null,
+					document: 48777528
+				}, {
+					id: 25,
+					name: "Различение",
+					note: null,
+					document: 48777153
+				}, {
+					id: 17,
+					name: "Перенёс ночью",
+					note: null,
+					document: 48776922
+				}, {
+					id: 27,
+					name: "Муравьи",
+					note: null,
+					document: 48776482
+				}, {
+					id: 18,
+					name: "Пещера",
+					note: null,
+					document: 48775880
+				}, {
+					id: 32,
+					name: "Поклон",
+					note: null,
+					document: 48775465
+				}, {
+					id: 41,
+					name: "Разъяснены",
+					note: null,
+					document: 48773728
+				}, {
+					id: 45,
+					name: "Коленопреклоненные",
+					note: null,
+					document: 48773325
+				}, {
+					id: 16,
+					name: "Пчёлы",
+					note: null,
+					document: 48773155
+				}, {
+					id: 30,
+					name: "Греки",
+					note: null,
+					document: 48772788
+				}, {
+					id: 11,
+					name: "Худ",
+					note: null,
+					document: 48772623
+				}, {
+					id: 14,
+					name: "Авраам",
+					note: null,
+					document: 48772141
+				}, {
+					id: 12,
+					name: "Иосиф",
+					note: null,
+					document: 48771932
+				}, {
+					id: 40,
+					name: "Верующий",
+					note: null,
+					document: 48770431
+				}, {
+					id: 28,
+					name: "Рассказы",
+					note: null,
+					document: 48770185
+				}, {
+					id: 39,
+					name: "Толпы",
+					note: null,
+					document: 48769926
+				}, {
+					id: 29,
+					name: "Паук",
+					note: null,
+					document: 48769515
+				}, {
+					id: 31,
+					name: "Лукман",
+					note: null,
+					document: 48769216
+				}, {
+					id: 42,
+					name: "Совет",
+					note: null,
+					document: 48768994
+				}, {
+					id: 10,
+					name: "Иона",
+					note: null,
+					document: 48768761
+				}, {
+					id: 34,
+					name: "Саба",
+					note: null,
+					document: 48768394
+				}, {
+					id: 35,
+					name: "Ангелы",
+					note: null,
+					document: 48768104
+				}, {
+					id: 7,
+					name: "Преграды",
+					note: null,
+					document: 48767511
+				}, {
+					id: 46,
+					name: "Пески",
+					note: null,
+					document: 48766531
+				}, {
+					id: 6,
+					name: "Скот",
+					note: null,
+					document: 48766227
+				}, {
+					id: 13,
+					name: "Гром",
+					note: null,
+					document: 48762346
+				}, {
+					id: 2,
+					name: "Корова",
+					note: null,
+					document: 48761845
+				}, {
+					id: 98,
+					name: "Ясное знаменье",
+					note: null,
+					document: 48758979
+				}, {
+					id: 64,
+					name: "Взаимное обманывание",
+					note: null,
+					document: 48758869
+				}, {
+					id: 62,
+					name: "Собрание",
+					note: null,
+					document: 48758423
+				}, {
+					id: 8,
+					name: "Добыча",
+					note: null,
+					document: 48758290
+				}, {
+					id: 47,
+					name: "Мухаммад",
+					note: null,
+					document: 48757799
+				}, {
+					id: 3,
+					name: "Семейство Имрана",
+					note: null,
+					document: 48757570
+				}, {
+					id: 61,
+					name: "Ряды",
+					note: null,
+					document: 48752270
+				}, {
+					id: 57,
+					name: "Железо",
+					note: null,
+					document: 48752106
+				}, {
+					id: 4,
+					name: "Женщины",
+					note: null,
+					document: 48751788
+				}, {
+					id: 65,
+					name: "Развод",
+					note: null,
+					document: 48743085
+				}, {
+					id: 59,
+					name: "Сбор",
+					note: null,
+					document: 48742968
+				}, {
+					id: 33,
+					name: "Сонмы",
+					note: null,
+					document: 48742583
+				}, {
+					id: 63,
+					name: "Лицемеры",
+					note: null,
+					document: 48741645
+				}, {
+					id: 24,
+					name: "Свет",
+					note: null,
+					document: 48741541
+				}, {
+					id: 58,
+					name: "Препирательство",
+					note: null,
+					document: 48741154
+				}, {
+					id: 22,
+					name: "Хадж",
+					note: null,
+					document: 48740175
+				}, {
+					id: 48,
+					name: "Победа",
+					note: null,
+					document: 48727927
+				}, {
+					id: 66,
+					name: "Запрещение",
+					note: null,
+					document: 48727604
+				}, {
+					id: 60,
+					name: "Испытуемая",
+					note: null,
+					document: 48727405
+				}, {
+					id: 110,
+					name: "Помощь",
+					note: null,
+					document: 48724449
+				}, {
+					id: 49,
+					name: "Комнаты",
+					note: null,
+					document: 48724254
+				}, {
+					id: 9,
+					name: "Покаяние",
+					note: null,
+					document: 48723922
+				}, {
+					id: 5,
+					name: "Трапеза",
+					note: null,
+					document: 48722393
+				}
+			] );
+
+			private function aboutDialogClick( e:Event ): void {
+				if( e.target.buttonClickedIndex == 0 ) {
+					aboutDialog.visible = false;
+				}
+			}
+
+			private function dialogSuraClick( e:Event ): void {
+				if( e.target.buttonClickedIndex == 0 ) {
+					dialogSura.visible = false;
+				}
+			}
+			
+			protected function about_clickHandler( event: MouseEvent ): void {
+				aboutDialog.visible = true; 
+			}
+			
+			protected function play_clickHandler( event: MouseEvent ): void {
+				if( _currentState == 0 ) {
+					if( !currentSura ) {
+						var currentIndex: int = mainGrid.selectedIndex;
+						if( currentIndex == -1 ) {
+							currentIndex = 0;
+							mainGrid.setSelectedIndex( currentIndex );
+						}
+						currentSura = theHolyQuranSuras.getItemAt( currentIndex );
+						currentPosition = 0;
+						playSound();
+					} else {
+						playSound();
+					}
+				} else { // pause
+					if( currentChannel ) {
+						currentPosition = currentChannel.position;
+						currentChannel.stop();
+					}
+					_setCurrentState( 0 );
+				}
+			}
+
+			private function _setCurrentState( newState: int ): void {
+				_currentState = newState;
+				if( newState == 0 ) {
+					playButton.label = "play";
+				} else if( newState == 1 ) {
+					playButton.label = "stop";
+				}
+			}
+
+			private function playSound(): void {
+
+				var URL: String;
+				if( currentSura ) {
+					if( currentPosition == 0 ) {
+
+						URL = 'http://vk.com/doc3996662_' + currentSura.document;
+						mainTitle.text = 'Священный Коран.';
+						progressBar.visible = true;
+						currentSuraLabel.text = 'Сура №' + currentSura.id;
+						s = new Sound();
+						s.addEventListener( ProgressEvent.PROGRESS, onLoadProgress );
+						s.addEventListener( Event.COMPLETE, onLoadComplete );
+						s.addEventListener( IOErrorEvent.IO_ERROR, onIOError );
+						//s.addEventListener( Event.ID3, id3Handler );
+						var req: URLRequest = new URLRequest( URL );
+						s.load( req );
+						currentChannel = s.play( 0, 0, trans );
+						currentChannel.addEventListener( Event.SOUND_COMPLETE, onSoundComplete );
+					} else {
+						currentChannel = s.play( currentPosition, 0, trans );
+						currentChannel.addEventListener( Event.SOUND_COMPLETE, onSoundComplete );
+					}
+					if( positionTimer ) {
+						positionTimer.stop();
+					}
+					positionTimer = new Timer(50);
+					positionTimer.addEventListener( TimerEvent.TIMER, positionTimerHandler );
+					positionTimer.start();
+					_setCurrentState( 1 );
+				}
+			}
+
+			private function convertToTime( value: Number ) {
+				var minutes: uint = Math.floor( value / 1000 / 60 );
+				var seconds: uint = Math.floor( value / 1000 ) % 60;
+				return zeroPad( minutes, 3 ) + ':' + zeroPad( seconds, 2 );
+			}
+
+			private function positionTimerHandler( event: TimerEvent ): void {
+				timeProgressed = convertToTime( currentChannel.position );
+				if( s.length ) {
+					timeTotal = convertToTime( s.length );
+					if( loadProgress == 'загружено' ) {
+						progressBar.setProgress( Math.round( 100 * currentChannel.position / s.length ), 100 );
+					}
+				} else {
+					timeTotal = '000:00';
+				}
+			}
+
+			private function onSoundComplete( event: Event ): void {
+				currentChannel.removeEventListener( Event.SOUND_COMPLETE, arguments.callee );
+				var currentIndex: int = theHolyQuranSuras.getItemIndex( currentSura );
+				currentPosition = 0;
+				positionTimer.stop();
+				if( theHolyQuranSuras.length <= currentIndex + 1 ) {
+					_setCurrentState( 0 );
+				} else {
+					currentSura = theHolyQuranSuras.getItemAt( currentIndex + 1 );
+					mainGrid.setSelectedIndex( currentIndex + 1 );
+					mainGrid.ensureCellIsVisible( mainGrid.selectedIndex );
+					playSound();
+				}
+			}
+
+			private function onLoadProgress( event: ProgressEvent ): void {
+				var progress: Number = Math.round( 100 * ( event.bytesLoaded / event.bytesTotal ) )
+				if( progress < 100 ) {
+					loadProgress = 'загрузка ' + progress.toString() + '%';
+				} else {
+					loadProgress = 'загружено';
+				}
+				progressBar.setProgress( progress, 100 );
+			}
+
+			private function onLoadComplete( event: Event ): void {
+				loadProgress = 'загружено';
+				progressBar.setProgress( 100, 100 );
+			}
+
+			private function onIOError( event: IOErrorEvent ): void {
+				_setCurrentState( 0 );
+			}
+
+			protected function list_doubleClickHandler( event: GridEvent ): void {
+				if( event.item ) {
+					if( _currentState == 1 ) {
+						if( currentChannel ) {
+							currentChannel.stop();
+						}
+						_setCurrentState( 0 );
+					}
+					currentPosition = 0;
+					currentSura = event.item;
+					playSound();
+				}
+			}
+
+			protected function list_sortChangingHandler( event: GridSortEvent ): void
+			{
+				if( event.oldSortFields && event.oldSortFields.length && event.newSortFields && event.newSortFields.length && event.newSortFields[ 0 ].descending == false ) {
+					event.newSortFields.shift();
+				}
+			}
+
+			protected function list_sortChangeHandler( event: GridSortEvent ): void {
+				if( !event.newSortFields.length ) {
+					theHolyQuranSuras.sort = null;
+					fillArray();
+					theHolyQuranSuras.refresh();
+				}
+			}
+
+			protected function list_initializeHandler( event: FlexEvent ):void {
+				this.addEventListener( 'clickSuraDownload', onClickSuraDownload );
+				this.addEventListener( 'clickSuraSaveAs', onClickSuraSaveAs );
+				this.addEventListener( 'clickSuraText', onClickSuraText );
+			}
+
+			private function zeroPad( number: int, width: int ): String {
+				var ret: String = ""+number;
+				while( ret.length < width )
+					ret = "0" + ret;
+				return ret;
+			}
+
+			private function onClickSuraSaveAs( event: Event ): void {
+				var item: IGridItemRenderer = event.target as IGridItemRenderer;
+				if(!item || !item.data) {
+				} else {
+					var u: URLRequest = new URLRequest( 'http://vk.com/doc3996662_' + item.data.document );
+					var fileToDownload: FileReference = new FileReference();
+					var index: int = theHolyQuranSurasInReleaseOrder.getItemIndex( item.data );
+					fileToDownload.download( u, zeroPad( ++index, 3 ) + ' Сура ' + item.data.id + ' ' + item.data.name + '.mp3' );
+				}
+			}
+
+			private function onClickSuraDownload( event: Event ): void {
+				var item: IGridItemRenderer = event.target as IGridItemRenderer;
+				if(!item || !item.data) {
+				} else {
+					var u: URLRequest = new URLRequest( 'http://vk.com/doc3996662_' + item.data.document );
+					navigateToURL( u );
+				}
+			}
+
+			private function onClickSuraText( event: Event ): void {
+				var item: IGridItemRenderer = event.target as IGridItemRenderer;
+				if(!item || !item.data) {
+				} else {
+					var u: URLRequest = new URLRequest( 'http://vk.com/note3996662_' + item.data.note );
+					var urlLoader: URLLoader = new URLLoader();
+					urlLoader.dataFormat = URLLoaderDataFormat.BINARY;
+					urlLoader.addEventListener( Event.COMPLETE, completeHandler );
+					urlLoader.load( u );
+				}
+			}
+
+			private function completeHandler( event: Event ):void {
+				var loader:URLLoader = URLLoader( event.target );
+				var ba: ByteArray = loader.data as ByteArray;
+				var data: String = ba.readMultiByte( ba.length, 'windows-1251' );
+				var tmp: Array = data.split( 'fwn_post wk_text">' );
+				tmp = tmp[ 1 ].toString().split( '</div>' );
+				data = tmp[ 0 ].toString();
+				data = data.replace( /<br\/>/g, '' );
+				spriteSura.removeChildren();
+				var tf:TextField = vk.gui.Utils.addText( 0, 0, 500, 14, data, 0,
+					vk.gui.Utils.TXT_HTML | vk.gui.Utils.TXT_AUTOSIZE | vk.gui.Utils.TXT_MULTILINE, 0 );
+				tf.styleSheet = myCSS;
+				spriteSura.addChild( tf );
+				spriteSura.dispatchEvent( new Event( Event.RESIZE ) );
+				dialogSura.visible = true;
+			}
+			
+			protected function volumeBar_changeHandler( event: Event ): void {
+				var slider: HSlider = event.target as HSlider;
+				trans.volume = slider.value / 100;
+				currentChannel.soundTransform = trans;
+			}
+			
+			private function onMouseWheelChanging( event: MouseEvent ):void
+			{
+				event.preventDefault();
+				
+				var modifier:int = 4;
+				var delta:Number = Number( event.delta ) * modifier;
+				var scroller = mainGrid.scroller;
+				var viewport:IViewport = scroller.verticalScrollBar.viewport;
+				var vPos:Number = viewport.verticalScrollPosition;
+				var maximum:Number = scroller.verticalScrollBar.maximum;
+				
+				if ( delta < 0 )
+				{
+					scroller.verticalScrollBar.viewport.verticalScrollPosition =
+						Math.min( vPos - delta, maximum );
+				}
+				else
+				{
+					scroller.verticalScrollBar.viewport.verticalScrollPosition =
+						Math.max( vPos - delta, 0 );
+				}
+			}
+			
+			private function nameLabelFunction( item: Object, column: GridColumn ): String {
+				return '<b>test<b>';
+			}
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- Разместить невизуальные элементы (например, службы или объекты значений) -->
+		<fx:String id="aboutText">
+			<![CDATA[	<b>Священный Коран</b>
+
+<a href='http://lib.rus.ec/b/180019' target='_blank'>перевод</a> <a href='http://ru.wikipedia.org/wiki/%D0%A8%D1%83%D0%BC%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9,_%D0%A2%D0%B5%D0%BE%D0%B4%D0%BE%D1%80_%D0%90%D0%B4%D0%B0%D0%BC%D0%BE%D0%B2%D0%B8%D1%87'
+target='_blank'>Теодора Адамовича Шумовского</a>,
+получивший благословение <a href='http://ru.wikipedia.org/wiki/%D0%93%D0%B0%D0%B9%D0%BD%D1%83%D1%82%D0%B4%D0%B8%D0%BD,_%D0%A0%D0%B0%D0%B2%D0%B8%D0%BB%D1%8C_%D0%98%D1%81%D0%BC%D0%B0%D0%B3%D0%B8%D0%BB%D0%BE%D0%B2%D0%B8%D1%87' target='_blank'>Председателя Совета Муфтиев России</a>
+читает Народный артист <a href='http://ru.wikipedia.org/wiki/%D0%9A%D0%BB%D1%8E%D0%BA%D0%B2%D0%B8%D0%BD,_%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80_%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B8%D1%87' target='_blank'>Александр Клюквин</a>
+<a href="http://truetorrents.ru/torrent-1693.html" target='_blank'>torrent</a>
+Издательство «Покидышевъ и сыновья»
+]]>
+		</fx:String>
+	</fx:Declarations>
+	<s:DataGrid x="10" y="38" width="787" height="682" editable="false" enabled="true" id="mainGrid"
+				requestedRowCount="4" dataProvider="{theHolyQuranSuras}" sortChanging="list_sortChangingHandler( event )"
+				 sortChange="list_sortChangeHandler( event )" initialize="list_initializeHandler( event)"
+				 gridDoubleClick="list_doubleClickHandler( event )" doubleClickEnabled="true"
+				 mouseWheel="onMouseWheelChanging( event )">
+		<s:columns>
+			<s:ArrayList>
+				<s:GridColumn width="38" dataField="id" headerText="№"></s:GridColumn>
+				<s:GridColumn dataField="name" headerText="Название Суры"></s:GridColumn>
+				<s:GridColumn width="84" headerText="Действия"><!--  itemRenderer="actionColumnRenderer" -->
+					<s:itemRenderer>
+						<fx:Component>
+							<s:GridItemRenderer>
+								<fx:Script>
+									protected function downloadClickHandler( event: MouseEvent ): void {
+										dispatchEvent(new Event( 'clickSuraDownload', true ) );
+										event.preventDefault();
+									}
+
+									protected function saveAsClickHandler( event: MouseEvent ): void {
+										dispatchEvent(new Event( 'clickSuraSaveAs', true ) );
+										event.preventDefault();
+									}
+
+									protected function noteClickHandler( event:MouseEvent ): void {
+										dispatchEvent(new Event( 'clickSuraText', true ) );
+										event.preventDefault();
+									}
+								</fx:Script>
+								<s:HGroup height="100%" paddingTop="0">
+									<mx:Image id="textIcon" maxWidth="24" maxHeight="24" source="@Embed(source='asserts/text.png')" smoothBitmapContent="false"
+										visible="{data.note ? true : false}" click="noteClickHandler( event )"
+										toolTip="Показать текст Суры №{data.id}" />
+									<mx:Image id="saveAsIcon" maxWidth="24" maxHeight="24" source="@Embed(source='asserts/save_as.png')" smoothBitmapContent="false"
+										visible="{data.document ? true : false}" click="saveAsClickHandler( event )"
+										toolTip="Сохранить Суру №{data.id} как..." />
+									<mx:Image id="downloadIcon" maxWidth="24" maxHeight="24" source="@Embed(source='asserts/download.png')" smoothBitmapContent="false"
+										visible="{data.document ? true : false}" click="downloadClickHandler( event )"
+										toolTip="Сохранить Суру №{data.id}" />
+								</s:HGroup>
+							</s:GridItemRenderer>
+						</fx:Component>
+					</s:itemRenderer>
+				</s:GridColumn>
+			</s:ArrayList>
+		</s:columns>
+	</s:DataGrid>
+	<s:Label id="mainTitle" x="10" y="10" fontSize="24"
+			 text="Священный Коран. Перевод Т.А.Шумовского"/>
+	<s:Label id="currentSuraLabel" x="228" y="10" width="128" fontSize="24"/>
+	<mx:ProgressBar id="progressBar" x="359" y="2" visible="false" maximum="100" minimum="0" mode="manual" label="{timeProgressed} / {timeTotal} | {loadProgress}"/>
+	<s:HSlider id="volumeBar" x="562" y="15" change="volumeBar_changeHandler( event )"
+			   liveDragging="true" maximum="100" minimum="0" stepSize="1" value="50" />
+</s:Application>
