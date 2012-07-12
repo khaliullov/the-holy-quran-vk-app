@@ -3,7 +3,7 @@
 			   xmlns:s="library://ns.adobe.com/flex/spark"
 			   xmlns:mx="library://ns.adobe.com/flex/mx"
 			   width="807" height="730" minWidth="807" minHeight="730" creationComplete="initApp()"
-			   viewSourceURL="http://leandr.su/">
+			   viewSourceURL="https://code.google.com/p/the-holy-quran-vk-app/">
 
 	<fx:Script>
 		<![CDATA[
@@ -706,9 +706,8 @@
 					if( currentPosition == 0 ) {
 
 						URL = 'http://vk.com/doc3996662_' + currentSura.document;
-						mainTitle.text = 'Священный Коран.';
+						mainTitle.text = 'Священный Коран. Сура №' + currentSura.id;
 						progressBar.visible = true;
-						currentSuraLabel.text = 'Сура №' + currentSura.id;
 						s = new Sound();
 						s.addEventListener( ProgressEvent.PROGRESS, onLoadProgress );
 						s.addEventListener( Event.COMPLETE, onLoadComplete );
@@ -973,7 +972,6 @@ target='_blank'>Теодора Адамовича Шумовского</a>,
 	</s:DataGrid>
 	<s:Label id="mainTitle" x="10" y="10" fontSize="24"
 			 text="Священный Коран. Перевод Т.А.Шумовского"/>
-	<s:Label id="currentSuraLabel" x="228" y="10" width="128" fontSize="24"/>
 	<mx:ProgressBar id="progressBar" x="359" y="2" visible="false" maximum="100" minimum="0" mode="manual" label="{timeProgressed} / {timeTotal} | {loadProgress}"/>
 	<s:HSlider id="volumeBar" x="562" y="15" change="volumeBar_changeHandler( event )"
 			   liveDragging="true" maximum="100" minimum="0" stepSize="1" value="50" />
