@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Module xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		  xmlns:s="library://ns.adobe.com/flex/spark" 
+		  xmlns:mx="library://ns.adobe.com/flex/mx" width="807" height="730"
+		  implements="IModuleInterface">
+	<fx:Script>
+	<![CDATA[
+		public function getGetSuraText(): String {
+			return suraText;
+		}
+	]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<fx:String id="suraText">
+			<![CDATA[<b>Сура 105. Слон</b>
+<i>Во Имя милосердного милостивого Бога</i>
+
+Не ты ль видал, как твой Господь, в Своем возмездии суров,
+Сразил строптивого раба, на вас погнавшего слонов!
+
+Не Он ли вдруг пресек поток неисчислимых вражьих сил,
+Их козни разве не Господь твой в заблужденье превратил?
+
+Он выслал стаи грозных птиц, их называют «абабиль»,
+Они бежали по земле, с ее лица срывая пыль,
+
+Они взлетели в вышину и, над слонами строясь в ней,
+На них низринули дожди каленых глиняных камней.
+
+И вот враги поникли, сохнут, им возродиться не дано.
+Они — как мертвые колосья, где птицы выели зерно.]]>
+		</fx:String>
+	</fx:Declarations>
+</s:Module>

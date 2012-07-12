@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Module xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		  xmlns:s="library://ns.adobe.com/flex/spark" 
+		  xmlns:mx="library://ns.adobe.com/flex/mx" width="807" height="730"
+		  implements="IModuleInterface">
+	<fx:Script>
+	<![CDATA[
+		public function getGetSuraText(): String {
+			return suraText;
+		}
+	]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<fx:String id="suraText">
+			<![CDATA[<b>Сура 110. Помошь</b>
+<i>Во Имя милосердного милостивого Бога</i>
+
+Когда, победу ниспослав, Господь миров тебе помог,
+И видишь — толпы собрались и пали ниц у Божьих ног,
+
+Произнеси Ему хвалу, скажи: «Да будет славен Бог!»,
+Проси прощенья у Него — Он с тем, кто кается, не строг.]]>
+		</fx:String>
+	</fx:Declarations>
+</s:Module>

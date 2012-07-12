@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Module xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		  xmlns:s="library://ns.adobe.com/flex/spark" 
+		  xmlns:mx="library://ns.adobe.com/flex/mx" width="807" height="730"
+		  implements="IModuleInterface">
+	<fx:Script>
+	<![CDATA[
+		public function getGetSuraText(): String {
+			return suraText;
+		}
+	]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<fx:String id="suraText">
+			<![CDATA[<b>Сура 1. Открывающая книгу</b>
+
+Во имя Господа, Чье сердце милосердно,
+Чьей милости хотим, о ней прося усердно!
+
+Хвала Ему, Властителю миров,
+Над бытием простершему покров,
+
+Тому, Чье к тварям сердце милосердно,
+Чьей милости хотим, о ней прося усердно!
+
+Владыке дня Последнего Суда
+Хвала вовек и преданность всегда!
+
+Служа Тебе, к Тебе взывая в страхе:
+«Нам помоги!» — простерты мы во прахе.
+
+Веди нас, Боже, праведным путем.
+Дорогой тех, кто одарен Тобою,
+
+Не тех, Твой гнев над чьею встал судьбою,
+Не тех, кто бродит в сумраке густом.]]>
+		</fx:String>
+	</fx:Declarations>
+</s:Module>

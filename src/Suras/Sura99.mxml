@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Module xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		  xmlns:s="library://ns.adobe.com/flex/spark" 
+		  xmlns:mx="library://ns.adobe.com/flex/mx" width="807" height="730"
+		  implements="IModuleInterface">
+	<fx:Script>
+	<![CDATA[
+		public function getGetSuraText(): String {
+			return suraText;
+		}
+	]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<fx:String id="suraText">
+			<![CDATA[<b>Сура 99. Землетрясение</b>
+<i>Во Имя милосердного милостивого Бога</i>
+
+Когда, сотрясая землю, низринет свой рев труба
+И клады земля исторгнет, потом обнажит гроба,
+
+«Что с ней?» — человек, ты спросишь у грозных, у горьких дней
+Тогда-то земля расскажет о том, что бывало с ней,
+
+И будут ее сказанья струей неразрывной течь —
+Ведь Он, твой Господь великий, внушит ей живую речь.
+
+В тот День соберутся толпы у Трона, где место свято,
+Чтоб им их дела явили, земной расценили труд.
+
+Кто сделал на вес пылинки добро или зло когда-то,
+Добро или зло увидит и сведает Божий суд.]]>
+		</fx:String>
+	</fx:Declarations>
+</s:Module>

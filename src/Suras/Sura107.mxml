@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Module xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		  xmlns:s="library://ns.adobe.com/flex/spark" 
+		  xmlns:mx="library://ns.adobe.com/flex/mx" width="807" height="730"
+		  implements="IModuleInterface">
+	<fx:Script>
+	<![CDATA[
+		public function getGetSuraText(): String {
+			return suraText;
+		}
+	]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<fx:String id="suraText">
+			<![CDATA[<b>Сура 107. Подаяние</b>
+<i>Во Имя милосердного милостивого Бога</i>
+
+Видал ли ты того, кто почитает ложью
+Грядущий грозный Суд? Он топчет милость Божью,
+
+Он гонит от ворот нагого сироту
+И нищих для еды не даст раскрыться рту!
+
+Кто молится в тиши душой опустошенной —
+Беда его душе, участия лишенной.
+
+Притворщику беда! Он ни за что предаст
+И милостыни тем, кто просит, не подаст.]]>
+		</fx:String>
+	</fx:Declarations>
+</s:Module>

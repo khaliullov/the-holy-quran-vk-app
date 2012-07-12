@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Module xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		  xmlns:s="library://ns.adobe.com/flex/spark" 
+		  xmlns:mx="library://ns.adobe.com/flex/mx" width="807" height="730"
+		  implements="IModuleInterface">
+	<fx:Script>
+	<![CDATA[
+		public function getGetSuraText(): String {
+			return suraText;
+		}
+	]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<fx:String id="suraText">
+			<![CDATA[<b>Сура 93. Утро</b>
+<i>Во Имя милосердного милостивого Бога</i>
+
+И утренним светом, и сумраком ночи клянусь:
+Напрасно ты думал, что Я от тебя отвернусь!
+
+Господь не покинул тебя, возродил для добра,
+И это прекрасней того, что имел ты вчера.
+
+Придет от Создателя все, чтобы счастлив ты был.
+Не Он ли тебя, увидав сиротой, приютил?
+
+Блуждал ты — а выведен Богом на праведный путь
+И сделан богатым, и можешь от бед отдохнуть.
+
+Так будь же душою высок, сироту приюти,
+В просящую руку спасительный хлеб опусти.
+
+Прозревший от света и силы Господней любви,
+Сказанье о милостях Господа всем объяви.]]>
+		</fx:String>
+	</fx:Declarations>
+</s:Module>

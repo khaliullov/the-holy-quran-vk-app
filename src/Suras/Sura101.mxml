@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Module xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		  xmlns:s="library://ns.adobe.com/flex/spark" 
+		  xmlns:mx="library://ns.adobe.com/flex/mx" width="807" height="730"
+		  implements="IModuleInterface">
+	<fx:Script>
+	<![CDATA[
+		public function getGetSuraText(): String {
+			return suraText;
+		}
+	]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<fx:String id="suraText">
+			<![CDATA[<b>Сура 101. Поражающее</b>
+<i>Во Имя милосердного милостивого Бога</i>
+
+О поражающее! В нем какое свойство?
+Что есть оно, ты ведаешь едва ли.
+
+В тот День людей обнимет беспокойство,
+Как мотыльков, которых разогнали.
+
+Тогда, что клочья шерсти, горы станут.
+Кто взвесит больше — тот живи блаженно.
+
+А у кого весы людей обманут,
+Такому матерь — пропасть несомненно.
+
+Что эта пропасть? Кто тебя научит?
+Она — огонь, который жадно мучит.]]>
+		</fx:String>
+	</fx:Declarations>
+</s:Module>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Module xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		  xmlns:s="library://ns.adobe.com/flex/spark" 
+		  xmlns:mx="library://ns.adobe.com/flex/mx" width="807" height="730"
+		  implements="IModuleInterface">
+	<fx:Script>
+	<![CDATA[
+		public function getGetSuraText(): String {
+			return suraText;
+		}
+	]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<fx:String id="suraText">
+			<![CDATA[<b>Сура 102. Охота к умножению</b>
+<i>Во Имя милосердного милостивого Бога</i>
+
+В стяжаньи вы всю жизнь стремитесь друг друга превзойти,
+Пока не приведут к могиле земные вас пути.
+
+Тогда узнаете — известья сомнением не тронь —
+О, если б знали вы сегодня! — что будет вам огонь!
+
+Потом предстанут перед вами пылающие рвы
+И вам промолвят: «Расскажите, как наслаждались вы!»]]>
+		</fx:String>
+	</fx:Declarations>
+</s:Module>

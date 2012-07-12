@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Module xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		  xmlns:s="library://ns.adobe.com/flex/spark" 
+		  xmlns:mx="library://ns.adobe.com/flex/mx" width="807" height="730"
+		  implements="IModuleInterface">
+	<fx:Script>
+	<![CDATA[
+		public function getGetSuraText(): String {
+			return suraText;
+		}
+	]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<fx:String id="suraText">
+			<![CDATA[<b>Сура 94. Разве Мы не раскрыли</b>
+<i>Во Имя милосердного милостивого Бога</i>
+
+Мы разве твою не раскрыли томлением полную грудь?
+Очищено сердце, от скверны его охранителем будь.
+
+С тебя ли не сняли Мы ношу, что влек ты, покорен судьбе?
+Не Мы ли заставили многих теперь говорить о тебе?
+
+Поистине с тягостью легкость, предшествует легкому тягость,
+Пред светом склоняются скорби, приходит за бедами радость.
+
+И вот, разогнувшись без ноши, во бдении чистом и строгом
+С усердной и жаркой молитвой склонись перед Господом Богом.]]>
+		</fx:String>
+	</fx:Declarations>
+</s:Module>

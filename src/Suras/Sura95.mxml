@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Module xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		  xmlns:s="library://ns.adobe.com/flex/spark" 
+		  xmlns:mx="library://ns.adobe.com/flex/mx" width="807" height="730"
+		  implements="IModuleInterface">
+	<fx:Script>
+	<![CDATA[
+		public function getGetSuraText(): String {
+			return suraText;
+		}
+	]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<fx:String id="suraText">
+			<![CDATA[<b>Сура 95. Смоковница</b>
+<i>Во Имя милосердного милостивого Бога</i>
+
+Вот голос Мой внушающий и ясный!
+Маслина — и смоковница за ней,
+
+Синай — и этот город безопасный
+Для верной клятвы избраны Моей.
+
+Мной человек возвышен и отмечен,
+Его нижайшим сделаю опять,
+
+Но кто и верит и добросердечен —
+Тому награды не пересчитать!
+
+Так молвить, что про Суд солгал ты — грех.
+Ужели Бог не судит лучше всех?]]>
+		</fx:String>
+	</fx:Declarations>
+</s:Module>
