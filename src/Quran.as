@@ -376,7 +376,7 @@ package {
 			name: "Люди",
 			id: 114,
 			size: 426813,
-			note: "http://cs6091.vk.com/u3996662/f65873def36568.zip"
+			note: "http://cs6091.vk.com/u3996662/a78f678ab9a6c5.zip"
 		},
 		{
 			length: 64,
