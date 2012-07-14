@@ -592,7 +592,7 @@ close FH;
 open FH, "<quran.m3u";
 my @timings;
 while( <FH> ) {              
-	if( /#EXTINF:(\d+).*?(\d+)/ ) {
+	if( /#EXTINF:(\d+)[^\d]+?(\d+)/ ) {
 		$timings[ $2 ] = $1;
 	}
 }
