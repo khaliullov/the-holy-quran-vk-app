@@ -215,6 +215,8 @@
 					
 				} else {
 					sb.init( maxPos, pgSz );
+					sb.scrollPosition = 0;
+					content.y = TITLE_H + 1;
 					sb.visible = true;
 				}
 			} else {
