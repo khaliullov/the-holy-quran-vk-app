@@ -65,8 +65,8 @@
 				aboutButton.addEventListener( MouseEvent.CLICK, about_clickHandler );
 				playButton.addEventListener( MouseEvent.CLICK, play_clickHandler );
 
-				var sprite:Sprite = new Sprite();
-				var tf:TextField = vk.gui.Utils.addText( 0, 0, 500, 14, aboutText, 0,
+				var sprite: Sprite = new Sprite();
+				var tf: TextField = vk.gui.Utils.addText( 0, 0, 500, 14, aboutText, 0,
 					vk.gui.Utils.TXT_HTML | vk.gui.Utils.TXT_AUTOSIZE | vk.gui.Utils.TXT_MULTILINE, 0 );
 				myCSS.setStyle( "a:link", {color:"#0000ff", fontFamily:"Tahoma", textDecoration:"underline"} );
 				myCSS.setStyle( "a:hover", {color:"#0000ff", fontFamily:"Tahoma", textDecoration:"none"} );
@@ -82,19 +82,15 @@
 				parent.addChild( dialogSura );
 				_setCurrentState( 0 );
 				ToolTipManager.enabled = true;
-				Security.allowDomain("cs6091.vk.com"); 
-				Security.loadPolicyFile("http://cs6091.vk.com/crossdomain.xml"); 
-				var request:URLRequest = new URLRequest("http://cs6091.vk.com/crossdomain.xml"); 
-				var loader:URLLoader = new URLLoader(); 
-				loader.load(request); 
+				Security.allowDomain( "cs6091.vk.com" );
+				Security.loadPolicyFile( "http://cs6091.vk.com/crossdomain.xml" );
+				var request: URLRequest = new URLRequest( "http://cs6091.vk.com/crossdomain.xml" ); 
+				var loader: URLLoader = new URLLoader();
+				loader.load( request );
 			}
 
 			private function fillArray(): void {
 				theHolyQuranSuras = Quran.theHolyQuranSurasInReleaseOrder;
-				/* theHolyQuranSuras.removeAll();
-				for( var i: int = 0; i < Quran.theHolyQuranSurasInReleaseOrder.length - 1; ++i ) {
-					theHolyQuranSuras.addItemAt( Quran.theHolyQuranSurasInReleaseOrder.getItemAt( i ), i );
-				} */
 			}
 
 			private function aboutDialogClick( e:Event ): void {
@@ -331,6 +327,7 @@
 						module.unload();
 					}
 					module = ModuleManager.getModule( item.data.note ); // 'Sura' + item.data.id + '.swf'
+					//module = ModuleManager.getModule( 'Suras/Sura' + item.data.id + '.swf' );
 					module.addEventListener( ModuleEvent.READY, modEventHandler );
 					module.load( null, SecurityDomain.currentDomain );
 				}
@@ -339,7 +336,7 @@
 			private function modEventHandler(e:ModuleEvent):void {
 				var myModuleInstance: IModuleInterface = module.factory.create() as IModuleInterface;
 				spriteSura.removeChildren();
-				var tf:TextField = vk.gui.Utils.addText( 0, 0, 500, 14,
+				var tf: TextField = vk.gui.Utils.addText( 0, 0, 500, 14,
 					myModuleInstance.getGetSuraText() , 0,
 					vk.gui.Utils.TXT_HTML | vk.gui.Utils.TXT_AUTOSIZE | vk.gui.Utils.TXT_MULTILINE, 0 );
 				tf.styleSheet = myCSS;

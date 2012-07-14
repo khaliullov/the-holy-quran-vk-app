@@ -213,7 +213,10 @@
 					sp.y = TITLE_H;
 					addChild( sp );
 					
-				} else sb.init( maxPos, pgSz );
+				} else {
+					sb.init( maxPos, pgSz );
+					sb.visible = true;
+				}
 			} else {
 				if (sb) sb.visible = false;
 			}
