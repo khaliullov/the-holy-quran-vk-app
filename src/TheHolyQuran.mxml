@@ -7,7 +7,7 @@
 
 	<fx:Script>
 		<![CDATA[
-			import Quran;
+			// import Quran.*;
 			
 			import flash.events.Event;
 			import flash.events.ProgressEvent;
@@ -152,7 +152,7 @@
 				if( currentSura ) {
 					if( currentPosition == 0 ) {
 
-						URL = 'http://vk.com/doc3996662_' + currentSura.document;
+						URL = currentSura.fallback;
 						mainTitle.text = 'Священный Коран. Сура №' + currentSura.id;
 						progressBar.visible = true;
 						s = new Sound();
@@ -300,7 +300,7 @@
 				var item: IGridItemRenderer = event.target as IGridItemRenderer;
 				if(!item || !item.data) {
 				} else {
-					var u: URLRequest = new URLRequest( 'http://vk.com/doc3996662_' + item.data.document );
+					var u: URLRequest = new URLRequest( item.data.fallback );
 					var fileToDownload: FileReference = new FileReference();
 					var oldSort: ISort = Quran.theHolyQuranSurasInReleaseOrder.sort;
 					Quran.theHolyQuranSurasInReleaseOrder.sort = null;
