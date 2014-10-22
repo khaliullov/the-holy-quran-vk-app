@@ -82,9 +82,11 @@
 				parent.addChild( dialogSura );
 				_setCurrentState( 0 );
 				ToolTipManager.enabled = true;
-				Security.allowDomain( "cs6091.vk.com" );
-				Security.loadPolicyFile( "http://cs6091.vk.com/crossdomain.xml" );
-				var request: URLRequest = new URLRequest( "http://cs6091.vk.com/crossdomain.xml" ); 
+				Security.allowDomain( "app.vk.com" );
+				Security.loadPolicyFile( "https://app.vk.com/crossdomain.xml" );
+				Security.allowDomain( "pp.vk.com" );
+				Security.loadPolicyFile( "https://pp.vk.com/crossdomain.xml" );
+				var request: URLRequest = new URLRequest( "//app.vk.com/crossdomain.xml" ); 
 				var loader: URLLoader = new URLLoader();
 				loader.load( request );
 			}
@@ -151,8 +153,7 @@
 				var URL: String;
 				if( currentSura ) {
 					if( currentPosition == 0 ) {
-
-						URL = currentSura.fallback;
+						URL = 'https://m.vk.com/doc3996662_' + currentSura.document;
 						mainTitle.text = 'Священный Коран. Сура №' + currentSura.id;
 						progressBar.visible = true;
 						s = new Sound();
@@ -186,6 +187,9 @@
 			}
 
 			private function positionTimerHandler( event: TimerEvent ): void {
+				if (!currentChannel) {
+					return
+				}
 				timeProgressed = convertToTime( currentChannel.position );
 				if( s.length ) {
 					timeTotal = convertToTime( s.length );
@@ -265,7 +269,6 @@
 
 			protected function list_initializeHandler( event: FlexEvent ):void {
 				this.addEventListener( 'clickSuraDownload', onClickSuraDownload );
-				this.addEventListener( 'clickSuraSaveAs', onClickSuraSaveAs );
 				this.addEventListener( 'clickSuraText', onClickSuraText );
 				this.addEventListener( 'clickListenSura', onClickListenSura );
 			}
@@ -295,26 +298,17 @@
 					}
 				}
 			}
-
-			private function onClickSuraSaveAs( event: Event ): void {
-				var item: IGridItemRenderer = event.target as IGridItemRenderer;
-				if(!item || !item.data) {
-				} else {
-					var u: URLRequest = new URLRequest( item.data.fallback );
-					var fileToDownload: FileReference = new FileReference();
-					var oldSort: ISort = Quran.theHolyQuranSurasInReleaseOrder.sort;
-					Quran.theHolyQuranSurasInReleaseOrder.sort = null;
-					var index: int = Quran.theHolyQuranSurasInReleaseOrder.getItemIndex( item.data );
-					Quran.theHolyQuranSurasInReleaseOrder.sort = oldSort;
-					fileToDownload.download( u, zeroPad( ++index, 3 ) + ' Сура ' + item.data.id + ' ' + item.data.name + '.mp3' );
-				}
+			
+			private function saveSuraCallback( URL: String, filename: String ): void {
+				var u: URLRequest = new URLRequest(URL);
+				var fileToDownload: FileReference = new FileReference();
+				fileToDownload.download( u, filename );
 			}
 
 			private function onClickSuraDownload( event: Event ): void {
 				var item: IGridItemRenderer = event.target as IGridItemRenderer;
-				if(!item || !item.data) {
-				} else {
-					var u: URLRequest = new URLRequest( 'http://vk.com/doc3996662_' + item.data.document );
+				if (item && item.data) {
+					var u: URLRequest = new URLRequest( '//pp.vk.com/doc3996662_' + item.data.document );
 					navigateToURL( u );
 				}
 			}
@@ -398,11 +392,13 @@ target='_blank'>Теодора Адамовича Шумовского</a>,
 ]]>
 		</fx:String>
 	</fx:Declarations>
-	<s:DataGrid x="10" y="38" width="787" height="682" editable="false" enabled="true" id="mainGrid"
-				requestedRowCount="4" dataProvider="{theHolyQuranSuras}" sortChanging="list_sortChangingHandler( event )"
-				sortChange="list_sortChangeHandler( event )" initialize="list_initializeHandler( event)"
-				gridDoubleClick="list_doubleClickHandler( event )" doubleClickEnabled="true"
-				mouseWheel="onMouseWheelChanging( event )">
+	<s:DataGrid id="mainGrid" x="10" y="38" width="787" height="682"
+				dataProvider="{theHolyQuranSuras}" doubleClickEnabled="true" editable="false"
+				enabled="true" gridDoubleClick="list_doubleClickHandler( event )"
+				initialize="list_initializeHandler( event)"
+				mouseWheel="onMouseWheelChanging( event )" requestedRowCount="4"
+				sortChange="list_sortChangeHandler( event )"
+				sortChanging="list_sortChangingHandler( event )">
 		<s:columns>
 			<s:ArrayList>
 				<s:GridColumn width="38" dataField="id" headerText="№"></s:GridColumn>
@@ -411,7 +407,7 @@ target='_blank'>Теодора Адамовича Шумовского</a>,
 							  labelFunction="timeLabel" resizable="false">
 					<s:itemRenderer>
 						<fx:Component>
-							<s:DefaultGridItemRenderer textAlign="right" />
+							<s:DefaultGridItemRenderer textAlign="right"/>
 						</fx:Component>
 					</s:itemRenderer>
 				</s:GridColumn>
@@ -419,11 +415,11 @@ target='_blank'>Теодора Адамовича Шумовского</a>,
 							  labelFunction="sizeLabel" resizable="false">
 					<s:itemRenderer>
 						<fx:Component>
-							<s:DefaultGridItemRenderer textAlign="right" />
+							<s:DefaultGridItemRenderer textAlign="right"/>
 						</fx:Component>
 					</s:itemRenderer>
 				</s:GridColumn>
-				<s:GridColumn width="112" headerText="Действия">
+				<s:GridColumn width="84" headerText="Действия">
 					<s:itemRenderer>
 						<fx:Component>
 							<s:GridItemRenderer>
@@ -445,11 +441,6 @@ target='_blank'>Теодора Адамовича Шумовского</a>,
 										event.preventDefault();
 									}
 
-									protected function saveAsClickHandler( event: MouseEvent ): void {
-										dispatchEvent(new Event( 'clickSuraSaveAs', true ) );
-										event.preventDefault();
-									}
-
 									protected function noteClickHandler( event:MouseEvent ): void {
 										dispatchEvent(new Event( 'clickSuraText', true ) );
 										event.preventDefault();
@@ -457,18 +448,23 @@ target='_blank'>Теодора Адамовича Шумовского</a>,
 								</fx:Script>
 								<s:HGroup height="100%" paddingTop="0">
 									
-									<mx:Image maxWidth="24" maxHeight="24" useHandCursor="true" buttonMode="true"
+									<mx:Image maxWidth="24" maxHeight="24" buttonMode="true"
+											  click="listenClickHandler( event )"
+											  smoothBitmapContent="false"
 											  source="{data.id == FlexGlobals.topLevelApplication.playingSura ? pause : play}"
-											  smoothBitmapContent="false" click="listenClickHandler( event )"  />
-									<mx:Image maxWidth="24" maxHeight="24" source="@Embed(source='asserts/text.png')"
-											  smoothBitmapContent="false" useHandCursor="true" buttonMode="true"
-											  click="noteClickHandler( event )" toolTip="Показать текст Суры №{data.id}" />
-									<mx:Image maxWidth="24" maxHeight="24" source="@Embed(source='asserts/save_as.png')"
-											  smoothBitmapContent="false" useHandCursor="true" buttonMode="true"
-											  click="saveAsClickHandler( event )" toolTip="Сохранить Суру №{data.id} как..." />
-									<mx:Image maxWidth="24" maxHeight="24" source="@Embed(source='asserts/download.png')"
-											  smoothBitmapContent="false" useHandCursor="true" buttonMode="true"
-											  click="downloadClickHandler( event )" toolTip="Сохранить Суру №{data.id}" />
+											  useHandCursor="true"/>
+									<mx:Image maxWidth="24" maxHeight="24" buttonMode="true"
+											  click="noteClickHandler( event )"
+											  smoothBitmapContent="false"
+											  source="@Embed(source='asserts/text.png')"
+											  toolTip="Показать текст Суры №{data.id}"
+											  useHandCursor="true"/>
+									<mx:Image maxWidth="24" maxHeight="24" buttonMode="true"
+											  click="downloadClickHandler( event )"
+											  smoothBitmapContent="false"
+											  source="@Embed(source='asserts/download.png')"
+											  toolTip="Сохранить Суру №{data.id}"
+											  useHandCursor="true"/>
 								</s:HGroup>
 							</s:GridItemRenderer>
 						</fx:Component>
@@ -479,7 +475,9 @@ target='_blank'>Теодора Адамовича Шумовского</a>,
 	</s:DataGrid>
 	<s:Label id="mainTitle" x="10" y="10" fontSize="24"
 			 text="Священный Коран. Перевод Т.А.Шумовского"/>
-	<mx:ProgressBar id="progressBar" x="359" y="2" visible="false" maximum="100" minimum="0" mode="manual" label="{timeProgressed} / {timeTotal} | {loadProgress}"/>
+	<mx:ProgressBar id="progressBar" visible="false" x="359" y="2"
+					label="{timeProgressed} / {timeTotal} | {loadProgress}" maximum="100"
+					minimum="0" mode="manual"/>
 	<s:HSlider id="volumeBar" x="562" y="15" change="volumeBar_changeHandler( event )"
-			   liveDragging="true" maximum="100" minimum="0" stepSize="1" value="50" />
+			   liveDragging="true" maximum="100" minimum="0" stepSize="1" value="50"/>
 </s:Application>

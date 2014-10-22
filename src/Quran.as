@@ -8,8 +8,7 @@ package {
 			name: "Сгусток",
 			id: 96,
 			size: 1608514,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/cb51403a859b.mp3",
-			note: "http://cs6091.vk.com/u3996662/bd5f359c5388c3.zip"
+			note: "//app.vk.com/c6091/u3996662/bd5f359c5388c3.swf"
 		},
 		{
 			length: 237,
@@ -17,8 +16,7 @@ package {
 			name: "Закутавшийся",
 			id: 74,
 			size: 3811028,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/2dcab613dd46.mp3",
-			note: "http://cs6091.vk.com/u3996662/236632b05eb38a.zip"
+			note: "//app.vk.com/c6091/u3996662/236632b05eb38a.swf"
 		},
 		{
 			length: 46,
@@ -26,8 +24,7 @@ package {
 			name: "Пальмовые волокна",
 			id: 111,
 			size: 753657,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/d83e5a51c5a0.mp3",
-			note: "http://cs6091.vk.com/u3996662/fc256abea78f12.zip"
+			note: "//app.vk.com/c6091/u3996662/fc256abea78f12.swf"
 		},
 		{
 			length: 27,
@@ -35,8 +32,7 @@ package {
 			name: "Курайш",
 			id: 106,
 			size: 442277,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/9d3b964df785.mp3",
-			note: "http://cs6091.vk.com/u3996662/1727ac75def9fb.zip"
+			note: "//app.vk.com/c6091/u3996662/1727ac75def9fb.swf"
 		},
 		{
 			length: 27,
@@ -44,8 +40,7 @@ package {
 			name: "Обильный",
 			id: 108,
 			size: 440605,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/e704faba66ac.mp3",
-			note: "http://cs6091.vk.com/u3996662/21c9ae09dd79e5.zip"
+			note: "//app.vk.com/c6091/u3996662/21c9ae09dd79e5.swf"
 		},
 		{
 			length: 47,
@@ -53,8 +48,7 @@ package {
 			name: "Хулитель",
 			id: 104,
 			size: 757836,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/9ff6dac1e90e.mp3",
-			note: "http://cs6091.vk.com/u3996662/23e5919f67124c.zip"
+			note: "//app.vk.com/c6091/u3996662/23e5919f67124c.swf"
 		},
 		{
 			length: 46,
@@ -62,8 +56,7 @@ package {
 			name: "Подаяние",
 			id: 107,
 			size: 741118,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/bbae0c3e067e.mp3",
-			note: "http://cs6091.vk.com/u3996662/9defe7785f881a.zip"
+			note: "//app.vk.com/c6091/u3996662/9defe7785f881a.swf"
 		},
 		{
 			length: 42,
@@ -71,8 +64,7 @@ package {
 			name: "Охота к умножению",
 			id: 102,
 			size: 680514,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/52b2a896a79a.mp3",
-			note: "http://cs6091.vk.com/u3996662/16ff2a6175ffed.zip"
+			note: "//app.vk.com/c6091/u3996662/16ff2a6175ffed.swf"
 		},
 		{
 			length: 61,
@@ -80,8 +72,7 @@ package {
 			name: "Слон",
 			id: 105,
 			size: 982280,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/917859204e00.mp3",
-			note: "http://cs6091.vk.com/u3996662/dfe713bb60d4bc.zip"
+			note: "//app.vk.com/c6091/u3996662/dfe713bb60d4bc.swf"
 		},
 		{
 			length: 101,
@@ -89,8 +80,7 @@ package {
 			name: "Ночь",
 			id: 92,
 			size: 1621340,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/500d253edacb.mp3",
-			note: "http://cs6091.vk.com/u3996662/27e66beb1d8089.zip"
+			note: "//app.vk.com/c6091/u3996662/27e66beb1d8089.swf"
 		},
 		{
 			length: 82,
@@ -98,8 +88,7 @@ package {
 			name: "Город",
 			id: 90,
 			size: 1323335,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/043c2eac45f2.mp3",
-			note: "http://cs6091.vk.com/u3996662/30ddf187fda3ae.zip"
+			note: "//app.vk.com/c6091/u3996662/30ddf187fda3ae.swf"
 		},
 		{
 			length: 61,
@@ -107,8 +96,7 @@ package {
 			name: "Разве мы не раскрыли",
 			id: 94,
 			size: 995655,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/45317ab722bd.mp3",
-			note: "http://cs6091.vk.com/u3996662/16d89763f3a8ec.zip"
+			note: "//app.vk.com/c6091/u3996662/16d89763f3a8ec.swf"
 		},
 		{
 			length: 66,
@@ -116,8 +104,7 @@ package {
 			name: "Утро",
 			id: 93,
 			size: 1074231,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/fc66930c780c.mp3",
-			note: "http://cs6091.vk.com/u3996662/7c9d99868b9ab2.zip"
+			note: "//app.vk.com/c6091/u3996662/7c9d99868b9ab2.swf"
 		},
 		{
 			length: 46,
@@ -125,8 +112,7 @@ package {
 			name: "Могущество",
 			id: 97,
 			size: 744462,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/6c98311cb122.mp3",
-			note: "http://cs6091.vk.com/u3996662/0a659b601294de.zip"
+			note: "//app.vk.com/c6091/u3996662/0a659b601294de.swf"
 		},
 		{
 			length: 91,
@@ -134,8 +120,7 @@ package {
 			name: "Идущий ночью",
 			id: 86,
 			size: 1466695,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/d686f8d5894f.mp3",
-			note: "http://cs6091.vk.com/u3996662/0146eec9f71ffb.zip"
+			note: "//app.vk.com/c6091/u3996662/0146eec9f71ffb.swf"
 		},
 		{
 			length: 111,
@@ -143,8 +128,7 @@ package {
 			name: "Солнце",
 			id: 91,
 			size: 1785180,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/908d3800c873.mp3",
-			note: "http://cs6091.vk.com/u3996662/7a1548021e14dd.zip"
+			note: "//app.vk.com/c6091/u3996662/7a1548021e14dd.swf"
 		},
 		{
 			length: 163,
@@ -152,8 +136,7 @@ package {
 			name: "Нахмурился",
 			id: 80,
 			size: 2622352,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/cf3df83f141a.mp3",
-			note: "http://cs6091.vk.com/u3996662/7189d549d1825a.zip"
+			note: "//app.vk.com/c6091/u3996662/7189d549d1825a.swf"
 		},
 		{
 			length: 309,
@@ -161,8 +144,7 @@ package {
 			name: "Письменная трость",
 			id: 68,
 			size: 4959998,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/22f12375be18.mp3",
-			note: "http://cs6091.vk.com/u3996662/0601642a2df659.zip"
+			note: "//app.vk.com/c6091/u3996662/0601642a2df659.swf"
 		},
 		{
 			length: 96,
@@ -170,8 +152,7 @@ package {
 			name: "Высочайший",
 			id: 87,
 			size: 1549451,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/5b8a8808706c.mp3",
-			note: "http://cs6091.vk.com/u3996662/ebd46b0540463e.zip"
+			note: "//app.vk.com/c6091/u3996662/ebd46b0540463e.swf"
 		},
 		{
 			length: 47,
@@ -179,8 +160,7 @@ package {
 			name: "Смаковница",
 			id: 95,
 			size: 762434,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/8b1810eaceb8.mp3",
-			note: "http://cs6091.vk.com/u3996662/285f59f87d9f4b.zip"
+			note: "//app.vk.com/c6091/u3996662/285f59f87d9f4b.swf"
 		},
 		{
 			length: 31,
@@ -188,8 +168,7 @@ package {
 			name: "Предвечернее время",
 			id: 103,
 			size: 499956,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/2bacbd6189d4.mp3",
-			note: "http://cs6091.vk.com/u3996662/c4b4f9b01a6294.zip"
+			note: "//app.vk.com/c6091/u3996662/c4b4f9b01a6294.swf"
 		},
 		{
 			length: 109,
@@ -197,8 +176,7 @@ package {
 			name: "Башни",
 			id: 85,
 			size: 1758849,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/616e96ad8ac1.mp3",
-			note: "http://cs6091.vk.com/u3996662/cbb841f063f19c.zip"
+			note: "//app.vk.com/c6091/u3996662/cbb841f063f19c.swf"
 		},
 		{
 			length: 192,
@@ -206,8 +184,7 @@ package {
 			name: "Завернувшийся",
 			id: 73,
 			size: 3087123,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/f29acee23df5.mp3",
-			note: "http://cs6091.vk.com/u3996662/598a12d0fdf9c3.zip"
+			note: "//app.vk.com/c6091/u3996662/598a12d0fdf9c3.swf"
 		},
 		{
 			length: 50,
@@ -215,8 +192,7 @@ package {
 			name: "Поражающее",
 			id: 101,
 			size: 810499,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/3c807f025224.mp3",
-			note: "http://cs6091.vk.com/u3996662/46bc14b75450c8.zip"
+			note: "//app.vk.com/c6091/u3996662/46bc14b75450c8.swf"
 		},
 		{
 			length: 65,
@@ -224,8 +200,7 @@ package {
 			name: "Землетрясение",
 			id: 99,
 			size: 1054587,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/461141c21b17.mp3",
-			note: "http://cs6091.vk.com/u3996662/21fd825bb354fe.zip"
+			note: "//app.vk.com/c6091/u3996662/21fd825bb354fe.swf"
 		},
 		{
 			length: 102,
@@ -233,8 +208,7 @@ package {
 			name: "Раскалывание",
 			id: 82,
 			size: 1644746,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/9af10097782b.mp3",
-			note: "http://cs6091.vk.com/u3996662/e94fe3d086bc59.zip"
+			note: "//app.vk.com/c6091/u3996662/e94fe3d086bc59.swf"
 		},
 		{
 			length: 151,
@@ -242,8 +216,7 @@ package {
 			name: "Скручивание",
 			id: 81,
 			size: 2429673,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/65ac441306f9.mp3",
-			note: "http://cs6091.vk.com/u3996662/1fed6ffe1bb669.zip"
+			note: "//app.vk.com/c6091/u3996662/1fed6ffe1bb669.swf"
 		},
 		{
 			length: 320,
@@ -251,8 +224,7 @@ package {
 			name: "Звезда",
 			id: 53,
 			size: 5132197,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/6cfaec1309ea.mp3",
-			note: "http://cs6091.vk.com/u3996662/6fe8d77fa907d7.zip"
+			note: "//app.vk.com/c6091/u3996662/6fe8d77fa907d7.swf"
 		},
 		{
 			length: 108,
@@ -260,8 +232,7 @@ package {
 			name: "Разрушение",
 			id: 84,
 			size: 1736697,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/3826561b7027.mp3",
-			note: "http://cs6091.vk.com/u3996662/7b1d3e2d41f4ce.zip"
+			note: "//app.vk.com/c6091/u3996662/7b1d3e2d41f4ce.swf"
 		},
 		{
 			length: 58,
@@ -269,8 +240,7 @@ package {
 			name: "Мчащиеся",
 			id: 100,
 			size: 941738,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/eba9f530a26a.mp3",
-			note: "http://cs6091.vk.com/u3996662/4eced68f6c85e4.zip"
+			note: "//app.vk.com/c6091/u3996662/4eced68f6c85e4.swf"
 		},
 		{
 			length: 212,
@@ -278,8 +248,7 @@ package {
 			name: "Вырывающие",
 			id: 79,
 			size: 3402682,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/bb030bf5c1db.mp3",
-			note: "http://cs6091.vk.com/u3996662/14dd28c2519cd4.zip"
+			note: "//app.vk.com/c6091/u3996662/14dd28c2519cd4.swf"
 		},
 		{
 			length: 242,
@@ -287,8 +256,7 @@ package {
 			name: "Посылаемые",
 			id: 77,
 			size: 3886679,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/e6ba26a3f555.mp3",
-			note: "http://cs6091.vk.com/u3996662/65ac35c3e3d13f.zip"
+			note: "//app.vk.com/c6091/u3996662/65ac35c3e3d13f.swf"
 		},
 		{
 			length: 202,
@@ -296,8 +264,7 @@ package {
 			name: "Весть",
 			id: 78,
 			size: 3246365,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/8d574ffbc928.mp3",
-			note: "http://cs6091.vk.com/u3996662/8158fc8d1e6221.zip"
+			note: "//app.vk.com/c6091/u3996662/8158fc8d1e6221.swf"
 		},
 		{
 			length: 108,
@@ -305,8 +272,7 @@ package {
 			name: "Покрывающие",
 			id: 88,
 			size: 1740876,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/9cbc3ccc1ed9.mp3",
-			note: "http://cs6091.vk.com/u3996662/4f610480620a3e.zip"
+			note: "//app.vk.com/c6091/u3996662/4f610480620a3e.swf"
 		},
 		{
 			length: 141,
@@ -314,8 +280,7 @@ package {
 			name: "Заря",
 			id: 89,
 			size: 2265425,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/d0225e5ca4fb.mp3",
-			note: "http://cs6091.vk.com/u3996662/48544811571451.zip"
+			note: "//app.vk.com/c6091/u3996662/48544811571451.swf"
 		},
 		{
 			length: 177,
@@ -323,8 +288,7 @@ package {
 			name: "Воскресение",
 			id: 75,
 			size: 2850976,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/ab9c5b701567.mp3",
-			note: "http://cs6091.vk.com/u3996662/bcbf36d7fc4478.zip"
+			note: "//app.vk.com/c6091/u3996662/bcbf36d7fc4478.swf"
 		},
 		{
 			length: 193,
@@ -332,8 +296,7 @@ package {
 			name: "Обвешивающие",
 			id: 83,
 			size: 3107185,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/815a3a999b68.mp3",
-			note: "http://cs6091.vk.com/u3996662/a23a7f3a7abef8.zip"
+			note: "//app.vk.com/c6091/u3996662/a23a7f3a7abef8.swf"
 		},
 		{
 			length: 234,
@@ -341,8 +304,7 @@ package {
 			name: "Неизбежное",
 			id: 69,
 			size: 3749588,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/c079f6b952ce.mp3",
-			note: "http://cs6091.vk.com/u3996662/b8ff2b6e5776d2.zip"
+			note: "//app.vk.com/c6091/u3996662/b8ff2b6e5776d2.swf"
 		},
 		{
 			length: 371,
@@ -350,8 +312,7 @@ package {
 			name: "Рассеивающие",
 			id: 51,
 			size: 5955159,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/de358fc80f6b.mp3",
-			note: "http://cs6091.vk.com/u3996662/a9a00b01ef9a88.zip"
+			note: "//app.vk.com/c6091/u3996662/a9a00b01ef9a88.swf"
 		},
 		{
 			length: 260,
@@ -359,8 +320,7 @@ package {
 			name: "Гора",
 			id: 52,
 			size: 4177160,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/ee685913ed2a.mp3",
-			note: "http://cs6091.vk.com/u3996662/b5e2c67d94623d.zip"
+			note: "//app.vk.com/c6091/u3996662/b5e2c67d94623d.swf"
 		},
 		{
 			length: 443,
@@ -368,8 +328,7 @@ package {
 			name: "Падающие",
 			id: 56,
 			size: 7095351,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/284fe1c469ec.mp3",
-			note: "http://cs6091.vk.com/u3996662/d6f4067dcc1242.zip"
+			note: "//app.vk.com/c6091/u3996662/d6f4067dcc1242.swf"
 		},
 		{
 			length: 202,
@@ -377,8 +336,7 @@ package {
 			name: "Ступени",
 			id: 70,
 			size: 3245111,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/ee12e4b5047b.mp3",
-			note: "http://cs6091.vk.com/u3996662/b1a554629abbfa.zip"
+			note: "//app.vk.com/c6091/u3996662/b1a554629abbfa.swf"
 		},
 		{
 			length: 395,
@@ -386,8 +344,7 @@ package {
 			name: "Милосердный",
 			id: 55,
 			size: 6333830,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/8d7abd34722d.mp3",
-			note: "http://cs6091.vk.com/u3996662/f6ba73d0cc17a8.zip"
+			note: "//app.vk.com/c6091/u3996662/f6ba73d0cc17a8.swf"
 		},
 		{
 			length: 26,
@@ -395,8 +352,7 @@ package {
 			name: "Очищение",
 			id: 112,
 			size: 435590,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/6bd51a671f7d.mp3",
-			note: "http://cs6091.vk.com/u3996662/ca15f5b7338468.zip"
+			note: "//app.vk.com/c6091/u3996662/ca15f5b7338468.swf"
 		},
 		{
 			length: 48,
@@ -404,8 +360,7 @@ package {
 			name: "Неверные",
 			id: 109,
 			size: 777898,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/1511fb5455e4.mp3",
-			note: "http://cs6091.vk.com/u3996662/00257aef7c6903.zip"
+			note: "//app.vk.com/c6091/u3996662/00257aef7c6903.swf"
 		},
 		{
 			length: 23,
@@ -413,8 +368,7 @@ package {
 			name: "Рассвет",
 			id: 113,
 			size: 384181,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/f6eba58d4aab.mp3",
-			note: "http://cs6091.vk.com/u3996662/81082de3e3cd6b.zip"
+			note: "//app.vk.com/c6091/u3996662/81082de3e3cd6b.swf"
 		},
 		{
 			length: 26,
@@ -422,8 +376,7 @@ package {
 			name: "Люди",
 			id: 114,
 			size: 426813,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/5f35ef9708be.mp3",
-			note: "http://cs6091.vk.com/u3996662/a78f678ab9a6c5.zip"
+			note: "//app.vk.com/c6091/u3996662/a78f678ab9a6c5.swf"
 		},
 		{
 			length: 64,
@@ -431,8 +384,7 @@ package {
 			name: "Открывающий книгу",
 			id: 1,
 			size: 1035939,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/392bdbc0976e.mp3",
-			note: "http://cs6091.vk.com/u3996662/59ca300366df21.zip"
+			note: "//app.vk.com/c6091/u3996662/59ca300366df21.swf"
 		},
 		{
 			length: 405,
@@ -440,8 +392,7 @@ package {
 			name: "Луна",
 			id: 54,
 			size: 6497252,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/d182171bce71.mp3",
-			note: "http://cs6091.vk.com/u3996662/7c50fbc8981757.zip"
+			note: "//app.vk.com/c6091/u3996662/7c50fbc8981757.swf"
 		},
 		{
 			length: 832,
@@ -449,8 +400,7 @@ package {
 			name: "Стоящие рядом",
 			id: 37,
 			size: 13325033,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/6da14b8b873d.mp3",
-			note: "http://cs6091.vk.com/u3996662/0f1cf4620a1f09.zip"
+			note: "//app.vk.com/c6091/u3996662/0f1cf4620a1f09.swf"
 		},
 		{
 			length: 209,
@@ -458,8 +408,7 @@ package {
 			name: "Ной",
 			id: 71,
 			size: 3352945,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/a01423abe65c.mp3",
-			note: "http://cs6091.vk.com/u3996662/208cf9a675f883.zip"
+			note: "//app.vk.com/c6091/u3996662/208cf9a675f883.swf"
 		},
 		{
 			length: 228,
@@ -467,8 +416,7 @@ package {
 			name: "Человек",
 			id: 76,
 			size: 3654711,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/56f1179c6430.mp3",
-			note: "http://cs6091.vk.com/u3996662/9c37e4deca3f01.zip"
+			note: "//app.vk.com/c6091/u3996662/9c37e4deca3f01.swf"
 		},
 		{
 			length: 381,
@@ -476,8 +424,7 @@ package {
 			name: "Дым",
 			id: 44,
 			size: 6109386,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/14032bfefd00.mp3",
-			note: "http://cs6091.vk.com/u3996662/19cd1fe6eb3827.zip"
+			note: "//app.vk.com/c6091/u3996662/19cd1fe6eb3827.swf"
 		},
 		{
 			length: 376,
@@ -485,8 +432,7 @@ package {
 			name: "Кав Буква",
 			id: 50,
 			size: 6030809,
-			fallback: "http://cs521102.userapi.com/u76597032/audios/bd82e17f9587.mp3",
-			note: "http://cs6091.vk.com/u3996662/ae65d14c55ff67.zip"
+			note: "//app.vk.com/c6091/u3996662/ae65d14c55ff67.swf"
 		},
 		{
 			length: 1335,
@@ -494,8 +440,7 @@ package {
 			name: "Та Ха",
 			id: 20,
 			size: 21364060,
-			fallback: "http://cs521102.userapi.com/u76597032/audios/389e70783759.mp3",
-			note: "http://cs6091.vk.com/u3996662/f7fe2b49027586.zip"
+			note: "//app.vk.com/c6091/u3996662/f7fe2b49027586.swf"
 		},
 		{
 			length: 1305,
@@ -503,8 +448,7 @@ package {
 			name: "Поэты",
 			id: 26,
 			size: 20898871,
-			fallback: "http://cs521102.userapi.com/u76597032/audios/165693f24b09.mp3",
-			note: "http://cs6091.vk.com/u3996662/6c030a346c597c.zip"
+			note: "//app.vk.com/c6091/u3996662/6c030a346c597c.swf"
 		},
 		{
 			length: 657,
@@ -512,8 +456,7 @@ package {
 			name: "Аль-Хиджр",
 			id: 15,
 			size: 10522617,
-			fallback: "http://cs521102.userapi.com/u76597032/audios/6ac743308722.mp3",
-			note: "http://cs6091.vk.com/u3996662/861cdc5c43c23d.zip"
+			note: "//app.vk.com/c6091/u3996662/861cdc5c43c23d.swf"
 		},
 		{
 			length: 1040,
@@ -521,8 +464,7 @@ package {
 			name: "Мария",
 			id: 19,
 			size: 16647809,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/180d19437d9d.mp3",
-			note: "http://cs6091.vk.com/u3996662/70ef666134bb83.zip"
+			note: "//app.vk.com/c6091/u3996662/70ef666134bb83.swf"
 		},
 		{
 			length: 719,
@@ -530,8 +472,7 @@ package {
 			name: "Сад Буква",
 			id: 38,
 			size: 11514016,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/bb332f839327.mp3",
-			note: "http://cs6091.vk.com/u3996662/5f3d4512916374.zip"
+			note: "//app.vk.com/c6091/u3996662/5f3d4512916374.swf"
 		},
 		{
 			length: 673,
@@ -539,8 +480,7 @@ package {
 			name: "Йа Син",
 			id: 36,
 			size: 10783423,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/c1cd8499c20e.mp3",
-			note: "http://cs6091.vk.com/u3996662/002f5cddb784a4.zip"
+			note: "//app.vk.com/c6091/u3996662/002f5cddb784a4.swf"
 		},
 		{
 			length: 919,
@@ -548,8 +488,7 @@ package {
 			name: "Украшение",
 			id: 43,
 			size: 14712240,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/c216f3a17456.mp3",
-			note: "http://cs6091.vk.com/u3996662/2b910c29ff079f.zip"
+			note: "//app.vk.com/c6091/u3996662/2b910c29ff079f.swf"
 		},
 		{
 			length: 272,
@@ -557,8 +496,7 @@ package {
 			name: "Гении",
 			id: 72,
 			size: 4371094,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/5c0f933e1ea6.mp3",
-			note: "http://cs6091.vk.com/u3996662/76941015bd964f.zip"
+			note: "//app.vk.com/c6091/u3996662/76941015bd964f.swf"
 		},
 		{
 			length: 353,
@@ -566,8 +504,7 @@ package {
 			name: "Власть",
 			id: 67,
 			size: 5657572,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/3dd390bf4005.mp3",
-			note: "http://cs6091.vk.com/u3996662/8651df345f0e26.zip"
+			note: "//app.vk.com/c6091/u3996662/8651df345f0e26.swf"
 		},
 		{
 			length: 991,
@@ -575,8 +512,7 @@ package {
 			name: "Верующие",
 			id: 23,
 			size: 15862463,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/405fe793c169.mp3",
-			note: "http://cs6091.vk.com/u3996662/1da9a191b29c77.zip"
+			note: "//app.vk.com/c6091/u3996662/1da9a191b29c77.swf"
 		},
 		{
 			length: 1124,
@@ -584,8 +520,7 @@ package {
 			name: "Пророки",
 			id: 21,
 			size: 17995309,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/ffc5ed64ce56.mp3",
-			note: "http://cs6091.vk.com/u3996662/b428d2bbb303b9.zip"
+			note: "//app.vk.com/c6091/u3996662/b428d2bbb303b9.swf"
 		},
 		{
 			length: 929,
@@ -593,8 +528,7 @@ package {
 			name: "Различение",
 			id: 25,
 			size: 14876916,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/b4d6b22e46ae.mp3",
-			note: "http://cs6091.vk.com/u3996662/2e590b7aabaa93.zip"
+			note: "//app.vk.com/c6091/u3996662/2e590b7aabaa93.swf"
 		},
 		{
 			length: 1572,
@@ -602,8 +536,7 @@ package {
 			name: "Перенёс ночью",
 			id: 17,
 			size: 25169272,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/f67352a036d1.mp3",
-			note: "http://cs6091.vk.com/u3996662/b7d55d31b21c34.zip"
+			note: "//app.vk.com/c6091/u3996662/b7d55d31b21c34.swf"
 		},
 		{
 			length: 1138,
@@ -611,8 +544,7 @@ package {
 			name: "Муравьи",
 			id: 27,
 			size: 18227276,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/5190cd48ef29.mp3",
-			note: "http://cs6091.vk.com/u3996662/d4f5183e5e6f24.zip"
+			note: "//app.vk.com/c6091/u3996662/d4f5183e5e6f24.swf"
 		},
 		{
 			length: 1628,
@@ -620,8 +552,7 @@ package {
 			name: "Пещера",
 			id: 18,
 			size: 26059831,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/30cc51b16114.mp3",
-			note: "http://cs6091.vk.com/u3996662/3a8007a23efe7f.zip"
+			note: "//app.vk.com/c6091/u3996662/3a8007a23efe7f.swf"
 		},
 		{
 			length: 389,
@@ -629,8 +560,7 @@ package {
 			name: "Поклон",
 			id: 32,
 			size: 6234774,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/76696ef43abf.mp3",
-			note: "http://cs6091.vk.com/u3996662/96d28e3e242c86.zip"
+			note: "//app.vk.com/c6091/u3996662/96d28e3e242c86.swf"
 		},
 		{
 			length: 883,
@@ -638,8 +568,7 @@ package {
 			name: "Разъяснены",
 			id: 41,
 			size: 14135456,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/6c8234c66f4b.mp3",
-			note: "http://cs6091.vk.com/u3996662/5e23a5702af818.zip"
+			note: "//app.vk.com/c6091/u3996662/5e23a5702af818.swf"
 		},
 		{
 			length: 558,
@@ -647,8 +576,7 @@ package {
 			name: "Коленопреклоненные",
 			id: 45,
 			size: 8946911,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/da6534765209.mp3",
-			note: "http://cs6091.vk.com/u3996662/ea1c2dac55925d.zip"
+			note: "//app.vk.com/c6091/u3996662/ea1c2dac55925d.swf"
 		},
 		{
 			length: 1804,
@@ -656,8 +584,7 @@ package {
 			name: "Пчёлы",
 			id: 16,
 			size: 28869771,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/92f26fa07fa6.mp3",
-			note: "http://cs6091.vk.com/u3996662/ac07c96fd019fe.zip"
+			note: "//app.vk.com/c6091/u3996662/ac07c96fd019fe.swf"
 		},
 		{
 			length: 787,
@@ -665,8 +592,7 @@ package {
 			name: "Греки",
 			id: 30,
 			size: 12601964,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/a52bc63b113b.mp3",
-			note: "http://cs6091.vk.com/u3996662/2727bd3fbc46ea.zip"
+			note: "//app.vk.com/c6091/u3996662/2727bd3fbc46ea.swf"
 		},
 		{
 			length: 1893,
@@ -674,8 +600,7 @@ package {
 			name: "Худ",
 			id: 11,
 			size: 30303789,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/b6510c1c8fee.mp3",
-			note: "http://cs6091.vk.com/u3996662/812610bbbba6bf.zip"
+			note: "//app.vk.com/c6091/u3996662/812610bbbba6bf.swf"
 		},
 		{
 			length: 862,
@@ -683,8 +608,7 @@ package {
 			name: "Авраам",
 			id: 14,
 			size: 13799417,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/a4c4a756d752.mp3",
-			note: "http://cs6091.vk.com/u3996662/39d40dd2bbee65.zip"
+			note: "//app.vk.com/c6091/u3996662/39d40dd2bbee65.swf"
 		},
 		{
 			length: 1849,
@@ -692,8 +616,7 @@ package {
 			name: "Иосиф",
 			id: 12,
 			size: 29589497,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/2d701e1f570f.mp3",
-			note: "http://cs6091.vk.com/u3996662/bd375432612022.zip"
+			note: "//app.vk.com/c6091/u3996662/bd375432612022.swf"
 		},
 		{
 			length: 1217,
@@ -701,8 +624,7 @@ package {
 			name: "Верующий",
 			id: 40,
 			size: 19488677,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/5f63671421f5.mp3",
-			note: "http://cs6091.vk.com/u3996662/23ab24bcd56b91.zip"
+			note: "//app.vk.com/c6091/u3996662/23ab24bcd56b91.swf"
 		},
 		{
 			length: 1393,
@@ -710,8 +632,7 @@ package {
 			name: "Рассказы",
 			id: 28,
 			size: 22296527,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/d89501cd11c9.mp3",
-			note: "http://cs6091.vk.com/u3996662/4c0dffe80d274b.zip"
+			note: "//app.vk.com/c6091/u3996662/4c0dffe80d274b.swf"
 		},
 		{
 			length: 1134,
@@ -719,8 +640,7 @@ package {
 			name: "Толпы",
 			id: 39,
 			size: 18162075,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/b579cd1a224d.mp3",
-			note: "http://cs6091.vk.com/u3996662/fdb9cf86cbac47.zip"
+			note: "//app.vk.com/c6091/u3996662/fdb9cf86cbac47.swf"
 		},
 		{
 			length: 962,
@@ -728,8 +648,7 @@ package {
 			name: "Паук",
 			id: 29,
 			size: 15402708,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/55003037fd2e.mp3",
-			note: "http://cs6091.vk.com/u3996662/e978e904638674.zip"
+			note: "//app.vk.com/c6091/u3996662/e978e904638674.swf"
 		},
 		{
 			length: 580,
@@ -737,8 +656,7 @@ package {
 			name: "Лукман",
 			id: 31,
 			size: 9298414,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/8053a6fed73a.mp3",
-			note: "http://cs6091.vk.com/u3996662/97030f3c6368d5.zip"
+			note: "//app.vk.com/c6091/u3996662/97030f3c6368d5.swf"
 		},
 		{
 			length: 876,
@@ -746,8 +664,7 @@ package {
 			name: "Совет",
 			id: 42,
 			size: 14033892,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/b747c0124afa.mp3",
-			note: "http://cs6091.vk.com/u3996662/58f6d30457e48f.zip"
+			note: "//app.vk.com/c6091/u3996662/58f6d30457e48f.swf"
 		},
 		{
 			length: 1853,
@@ -755,8 +672,7 @@ package {
 			name: "Иона",
 			id: 10,
 			size: 29664311,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/5d2b666c5479.mp3",
-			note: "http://cs6091.vk.com/u3996662/b20aeb37d8baec.zip"
+			note: "//app.vk.com/c6091/u3996662/b20aeb37d8baec.swf"
 		},
 		{
 			length: 837,
@@ -764,8 +680,7 @@ package {
 			name: "Саба",
 			id: 34,
 			size: 13411551,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/a270d90b2d74.mp3",
-			note: "http://cs6091.vk.com/u3996662/851cddb41b71bb.zip"
+			note: "//app.vk.com/c6091/u3996662/851cddb41b71bb.swf"
 		},
 		{
 			length: 673,
@@ -773,8 +688,7 @@ package {
 			name: "Ангелы",
 			id: 35,
 			size: 10774646,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/121abc459cc9.mp3",
-			note: "http://cs6091.vk.com/u3996662/ecc06d529c62ef.zip"
+			note: "//app.vk.com/c6091/u3996662/ecc06d529c62ef.swf"
 		},
 		{
 			length: 3698,
@@ -782,8 +696,7 @@ package {
 			name: "Преграды",
 			id: 7,
 			size: 59173066,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/d3a775309629.mp3",
-			note: "http://cs6091.vk.com/u3996662/22edf0bcc11e64.zip"
+			note: "//app.vk.com/c6091/u3996662/22edf0bcc11e64.swf"
 		},
 		{
 			length: 730,
@@ -791,8 +704,7 @@ package {
 			name: "Пески",
 			id: 46,
 			size: 11697500,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/b2b7f04dae06.mp3",
-			note: "http://cs6091.vk.com/u3996662/674f1d16954569.zip"
+			note: "//app.vk.com/c6091/u3996662/674f1d16954569.swf"
 		},
 		{
 			length: 3434,
@@ -800,8 +712,7 @@ package {
 			name: "Скот",
 			id: 6,
 			size: 54948334,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/db9357f97ae7.mp3",
-			note: "http://cs6091.vk.com/u3996662/0aaf38593647aa.zip"
+			note: "//app.vk.com/c6091/u3996662/0aaf38593647aa.swf"
 		},
 		{
 			length: 900,
@@ -809,8 +720,7 @@ package {
 			name: "Гром",
 			id: 13,
 			size: 14419250,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/5a0c44f1ad5b.mp3",
-			note: "http://cs6091.vk.com/u3996662/3476c11b90ed4f.zip"
+			note: "//app.vk.com/c6091/u3996662/3476c11b90ed4f.swf"
 		},
 		{
 			length: 7065,
@@ -818,8 +728,7 @@ package {
 			name: "Корова",
 			id: 2,
 			size: 113050094,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/7fdefb83a259.mp3",
-			note: "http://cs6091.vk.com/u3996662/672cdf2b7552d6.zip"
+			note: "//app.vk.com/c6091/u3996662/672cdf2b7552d6.swf"
 		},
 		{
 			length: 121,
@@ -827,8 +736,7 @@ package {
 			name: "Ясное знаменье",
 			id: 98,
 			size: 1944422,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/776507f41768.mp3",
-			note: "http://cs6091.vk.com/u3996662/e3f479cc107996.zip"
+			note: "//app.vk.com/c6091/u3996662/e3f479cc107996.swf"
 		},
 		{
 			length: 265,
@@ -836,8 +744,7 @@ package {
 			name: "Взаимное обманывание",
 			id: 64,
 			size: 4253229,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/4e1534779761.mp3",
-			note: "http://cs6091.vk.com/u3996662/edc3c1d7871f69.zip"
+			note: "//app.vk.com/c6091/u3996662/edc3c1d7871f69.swf"
 		},
 		{
 			length: 183,
@@ -845,8 +752,7 @@ package {
 			name: "Собрание",
 			id: 62,
 			size: 2943345,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/dd624e3c71b7.mp3",
-			note: "http://cs6091.vk.com/u3996662/b52bd6ee0c7a81.zip"
+			note: "//app.vk.com/c6091/u3996662/b52bd6ee0c7a81.swf"
 		},
 		{
 			length: 1365,
@@ -854,8 +760,7 @@ package {
 			name: "Добыча",
 			id: 8,
 			size: 21850982,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/2eb1f6742107.mp3",
-			note: "http://cs6091.vk.com/u3996662/4c18e82a8256c2.zip"
+			note: "//app.vk.com/c6091/u3996662/4c18e82a8256c2.swf"
 		},
 		{
 			length: 612,
@@ -863,8 +768,7 @@ package {
 			name: "Мухаммад",
 			id: 47,
 			size: 9808325,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/63ff93cc504f.mp3",
-			note: "http://cs6091.vk.com/u3996662/ad1dfe3943925b.zip"
+			note: "//app.vk.com/c6091/u3996662/ad1dfe3943925b.swf"
 		},
 		{
 			length: 3909,
@@ -872,8 +776,7 @@ package {
 			name: "Семейство Имрана",
 			id: 3,
 			size: 62553520,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/6597b2e297df.mp3",
-			note: "http://cs6091.vk.com/u3996662/cdb41e7646f143.zip"
+			note: "//app.vk.com/c6091/u3996662/cdb41e7646f143.swf"
 		},
 		{
 			length: 236,
@@ -881,8 +784,7 @@ package {
 			name: "Ряды",
 			id: 61,
 			size: 3787622,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/925218c9ad81.mp3",
-			note: "http://cs6091.vk.com/u3996662/859a50a2a22fb9.zip"
+			note: "//app.vk.com/c6091/u3996662/859a50a2a22fb9.swf"
 		},
 		{
 			length: 632,
@@ -890,8 +792,7 @@ package {
 			name: "Железо",
 			id: 57,
 			size: 10118032,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/85dfe7c7037f.mp3",
-			note: "http://cs6091.vk.com/u3996662/e524e09071df82.zip"
+			note: "//app.vk.com/c6091/u3996662/e524e09071df82.swf"
 		},
 		{
 			length: 4105,
@@ -899,8 +800,7 @@ package {
 			name: "Женщины",
 			id: 4,
 			size: 65688214,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/c58a2f6a7965.mp3",
-			note: "http://cs6091.vk.com/u3996662/6aa848d8fdb936.zip"
+			note: "//app.vk.com/c6091/u3996662/6aa848d8fdb936.swf"
 		},
 		{
 			length: 288,
@@ -908,8 +808,7 @@ package {
 			name: "Развод",
 			id: 65,
 			size: 4624795,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/fce632e09b9a.mp3",
-			note: "http://cs6091.vk.com/u3996662/a5aff004c61167.zip"
+			note: "//app.vk.com/c6091/u3996662/a5aff004c61167.swf"
 		},
 		{
 			length: 418,
@@ -917,8 +816,7 @@ package {
 			name: "Сбор",
 			id: 59,
 			size: 6700798,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/7e5286acf7be.mp3",
-			note: "http://cs6091.vk.com/u3996662/8559bee33e2aff.zip"
+			note: "//app.vk.com/c6091/u3996662/8559bee33e2aff.swf"
 		},
 		{
 			length: 1316,
@@ -926,8 +824,7 @@ package {
 			name: "Сонмы",
 			id: 33,
 			size: 21072325,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/2f6988586821.mp3",
-			note: "http://cs6091.vk.com/u3996662/111158ff189220.zip"
+			note: "//app.vk.com/c6091/u3996662/111158ff189220.swf"
 		},
 		{
 			length: 198,
@@ -935,8 +832,7 @@ package {
 			name: "Лицемеры",
 			id: 63,
 			size: 3176566,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/1994a73530da.mp3",
-			note: "http://cs6091.vk.com/u3996662/0b8ff39f377312.zip"
+			note: "//app.vk.com/c6091/u3996662/0b8ff39f377312.swf"
 		},
 		{
 			length: 1290,
@@ -944,8 +840,7 @@ package {
 			name: "Свет",
 			id: 24,
 			size: 20650604,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/74434d1f7ec7.mp3",
-			note: "http://cs6091.vk.com/u3996662/b12e4b336683fe.zip"
+			note: "//app.vk.com/c6091/u3996662/b12e4b336683fe.swf"
 		},
 		{
 			length: 515,
@@ -953,8 +848,7 @@ package {
 			name: "Препирательство",
 			id: 58,
 			size: 8253934,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/0dfe98064f08.mp3",
-			note: "http://cs6091.vk.com/u3996662/4c8dc6e99f395e.zip"
+			note: "//app.vk.com/c6091/u3996662/4c8dc6e99f395e.swf"
 		},
 		{
 			length: 1311,
@@ -962,8 +856,7 @@ package {
 			name: "Хадж",
 			id: 22,
 			size: 20980791,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/d092f6e916cd.mp3",
-			note: "http://cs6091.vk.com/u3996662/f38e2bac59e41d.zip"
+			note: "//app.vk.com/c6091/u3996662/f38e2bac59e41d.swf"
 		},
 		{
 			length: 614,
@@ -971,8 +864,7 @@ package {
 			name: "Победа",
 			id: 48,
 			size: 9835074,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/cb76c76c274b.mp3",
-			note: "http://cs6091.vk.com/u3996662/b1c28d68314aef.zip"
+			note: "//app.vk.com/c6091/u3996662/b1c28d68314aef.swf"
 		},
 		{
 			length: 265,
@@ -980,8 +872,7 @@ package {
 			name: "Запрещение",
 			id: 66,
 			size: 4247796,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/f9f96b7aa54f.mp3",
-			note: "http://cs6091.vk.com/u3996662/bdf0128567d90d.zip"
+			note: "//app.vk.com/c6091/u3996662/bdf0128567d90d.swf"
 		},
 		{
 			length: 387,
@@ -989,8 +880,7 @@ package {
 			name: "Испытуемая",
 			id: 60,
 			size: 6198411,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/4ccc3f18ef3c.mp3",
-			note: "http://cs6091.vk.com/u3996662/4b93994c30f101.zip"
+			note: "//app.vk.com/c6091/u3996662/4b93994c30f101.swf"
 		},
 		{
 			length: 31,
@@ -998,8 +888,7 @@ package {
 			name: "Помощь",
 			id: 110,
 			size: 507061,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/65070d9eb514.mp3",
-			note: "http://cs6091.vk.com/u3996662/42719a97985e98.zip"
+			note: "//app.vk.com/c6091/u3996662/42719a97985e98.swf"
 		},
 		{
 			length: 404,
@@ -1007,8 +896,7 @@ package {
 			name: "Комнаты",
 			id: 49,
 			size: 6478026,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/592a6369cbad.mp3",
-			note: "http://cs6091.vk.com/u3996662/cdffbf0261aa26.zip"
+			note: "//app.vk.com/c6091/u3996662/cdffbf0261aa26.swf"
 		},
 		{
 			length: 2996,
@@ -1016,8 +904,7 @@ package {
 			name: "Покаяние",
 			id: 9,
 			size: 47941667,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/60296b084b29.mp3",
-			note: "http://cs6091.vk.com/u3996662/9aa3ec4a150922.zip"
+			note: "//app.vk.com/c6091/u3996662/9aa3ec4a150922.swf"
 		},
 		{
 			length: 3270,
@@ -1025,8 +912,7 @@ package {
 			name: "Трапеза",
 			id: 5,
 			size: 52332328,
-			fallback: "http://cs6293.userapi.com/u3996662/audios/9edea781d595.mp3",
-			note: "http://cs6091.vk.com/u3996662/b50f90ff80228e.zip"
+			note: "//app.vk.com/c6091/u3996662/b50f90ff80228e.swf"
 		}
 ]
  );
