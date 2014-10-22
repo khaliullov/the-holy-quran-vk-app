@@ -84,8 +84,6 @@
 				ToolTipManager.enabled = true;
 				Security.allowDomain( "app.vk.com" );
 				Security.loadPolicyFile( "https://app.vk.com/crossdomain.xml" );
-				Security.allowDomain( "pp.vk.com" );
-				Security.loadPolicyFile( "https://pp.vk.com/crossdomain.xml" );
 				var request: URLRequest = new URLRequest( "//app.vk.com/crossdomain.xml" ); 
 				var loader: URLLoader = new URLLoader();
 				loader.load( request );
@@ -299,16 +297,10 @@
 				}
 			}
 			
-			private function saveSuraCallback( URL: String, filename: String ): void {
-				var u: URLRequest = new URLRequest(URL);
-				var fileToDownload: FileReference = new FileReference();
-				fileToDownload.download( u, filename );
-			}
-
 			private function onClickSuraDownload( event: Event ): void {
 				var item: IGridItemRenderer = event.target as IGridItemRenderer;
 				if (item && item.data) {
-					var u: URLRequest = new URLRequest( '//pp.vk.com/doc3996662_' + item.data.document );
+					var u: URLRequest = new URLRequest( 'https://m.vk.com/doc3996662_' + item.data.document );
 					navigateToURL( u );
 				}
 			}
