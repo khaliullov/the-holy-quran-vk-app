@@ -2,7 +2,7 @@
 <s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
 			   xmlns:s="library://ns.adobe.com/flex/spark"
 			   xmlns:mx="library://ns.adobe.com/flex/mx"
-			   width="807" height="730" minWidth="807" minHeight="730" creationComplete="initApp()"
+			   width="625" height="730" minWidth="625" minHeight="730" creationComplete="initApp()"
 			   viewSourceURL="https://code.google.com/p/the-holy-quran-vk-app/">
 
 	<fx:Script>
@@ -60,8 +60,8 @@
 
 			private function initApp(): void {
 				fillArray();
-				var aboutButton: RoundButton = new RoundButton( "О переводе", 713, 9 );
-				playButton = new RoundButton( "", 665, 9 );
+				var aboutButton: RoundButton = new RoundButton( "О переводе", 535, 9 );
+				playButton = new RoundButton( "", 485, 9 );
 				aboutButton.addEventListener( MouseEvent.CLICK, about_clickHandler );
 				playButton.addEventListener( MouseEvent.CLICK, play_clickHandler );
 
@@ -146,14 +146,25 @@
 				}
 			}
 
+			private function freeSound(): void {
+				if (s) {
+					s.removeEventListener( ProgressEvent.PROGRESS, onLoadProgress );
+					s.removeEventListener( Event.COMPLETE, onLoadComplete );
+					s.removeEventListener( IOErrorEvent.IO_ERROR, onIOError );
+				}
+			}
+
 			private function playSound(): void {
 
 				var URL: String;
 				if( currentSura ) {
 					if( currentPosition == 0 ) {
 						URL = 'https://m.vk.com/doc3996662_' + currentSura.document;
-						mainTitle.text = 'Священный Коран. Сура №' + currentSura.id;
+						mainTitle.text = 'Священный Коран. Сура ' + currentSura.id;
+						mainTitle.setStyle( 'fontSize', 14 );
+						mainTitle.y = 16;
 						progressBar.visible = true;
+						freeSound();
 						s = new Sound();
 						s.addEventListener( ProgressEvent.PROGRESS, onLoadProgress );
 						s.addEventListener( Event.COMPLETE, onLoadComplete );
@@ -384,7 +395,7 @@ target='_blank'>Теодора Адамовича Шумовского</a>,
 ]]>
 		</fx:String>
 	</fx:Declarations>
-	<s:DataGrid id="mainGrid" x="10" y="38" width="787" height="682"
+	<s:DataGrid id="mainGrid" x="10" y="38" width="97.5%" height="682"
 				dataProvider="{theHolyQuranSuras}" doubleClickEnabled="true" editable="false"
 				enabled="true" gridDoubleClick="list_doubleClickHandler( event )"
 				initialize="list_initializeHandler( event)"
@@ -465,11 +476,11 @@ target='_blank'>Теодора Адамовича Шумовского</a>,
 			</s:ArrayList>
 		</s:columns>
 	</s:DataGrid>
-	<s:Label id="mainTitle" x="10" y="10" fontSize="24"
+	<s:Label id="mainTitle" x="10" y="15" fontSize="17"
 			 text="Священный Коран. Перевод Т.А.Шумовского"/>
-	<mx:ProgressBar id="progressBar" visible="false" x="359" y="2"
+	<mx:ProgressBar id="progressBar" visible="false" x="205" y="2"
 					label="{timeProgressed} / {timeTotal} | {loadProgress}" maximum="100"
-					minimum="0" mode="manual"/>
-	<s:HSlider id="volumeBar" x="562" y="15" change="volumeBar_changeHandler( event )"
+					minimum="0" mode="manual" width="170"/>
+	<s:HSlider id="volumeBar" x="380" y="15" change="volumeBar_changeHandler( event )"
 			   liveDragging="true" maximum="100" minimum="0" stepSize="1" value="50"/>
 </s:Application>
